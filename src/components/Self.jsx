@@ -3,8 +3,8 @@ import '../scss/_Self.scss';
 function Self() {
   return (
     <div className='self'>
-      <div className='name'>Hangyuan Liu</div>
-      <div className='role'>Web Developer</div>
+      <div className='name h1'>Hangyuan Liu</div>
+      <div className='role h2'>Web Developer</div>
       <div className='info'>
         I build accessible, inclusive products and digital experiences for the
         web.
