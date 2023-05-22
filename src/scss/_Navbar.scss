@@ -1,0 +1,105 @@
+.navbar-container {
+  // sticky has to be used with a specific offset.
+  position: sticky;
+  top: 0;
+
+  background-color: var(--bg-color-nav);
+}
+
+.navbar {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+
+
+  .site-title {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--text-primary);
+  }
+
+  .open-button {
+    position: absolute;
+    font-size: 1.2rem;
+    right: 1rem;
+    top: 1.9rem;
+  }
+  .close-button {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+  }
+
+  .links {
+    .link {
+      display: block;
+      padding-bottom: 0.8rem;
+
+      text-align: center;
+
+      &:first-of-type {
+        padding-top: 0.8rem;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  .non-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .non-mobile {
+      display: initial;
+    }
+
+    .site-title {
+      align-self: center;
+      border: none;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: min(50%, 400px);
+
+      .link {
+        margin: 0 0.7rem;
+        padding: 1.4rem 0;
+
+        &:first-of-type {
+          padding-top: 1.4rem;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+}

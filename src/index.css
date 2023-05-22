@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --bg-color: #504945;
+  --bg-color-nav: #665c54;
+  --bg-color-foot: #665c54;
+  --bg-color-icon: #ebdbb2;
+  --title-h1: #ebdbb2;
+  --title-h2: #ebdbb2;
+  --title-h3: #ebdbb2;
+  --text-primary: #ebdbb2;
+  --text-secondary: #ebdbb2;
+  --border-color: #ebdbb2;
+  --margin-bottom: 0.8rem;
+
+}
+
+
+* {
+  box-sizing: border-box;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  letter-spacing: 0.025rem;
+}
+
+body {
+  min-width: 400px;
+}

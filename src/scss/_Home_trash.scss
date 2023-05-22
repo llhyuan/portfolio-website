@@ -1,0 +1,32 @@
+.homepage {
+  .introduction {
+    padding: 5rem 0.5rem;
+    p {
+     font-size: 3.5rem; 
+     line-height: 5.5rem;
+     
+    }
+  }
+
+  .techstack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+
+    text-align:center;
+    .stacklist {
+     display: grid; 
+     grid-template-columns: 1fr 1fr;
+     grid-auto-flow: row;
+     row-gap: 2rem;
+     column-gap:4rem;
+
+     margin: 2rem auto;
+
+     p {
+       align-self:center;
+     }
+    }
+  }
+}

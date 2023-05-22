@@ -1,0 +1,23 @@
+.self {
+  padding: 2rem;
+  .name {
+    font-size: 3rem;
+  }
+  .role {
+    font-size: 1.8rem;
+  }
+  .info {
+    padding: 1rem 0;
+  }
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    
+    padding: 1rem 0;
+  }
+}
+
+.icon {
+  width: 2rem;
+}
