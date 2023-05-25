@@ -3,21 +3,21 @@ import '../scss/_Self.scss';
 function Self() {
   return (
     <div className='self'>
-      <div className='name h1'>Hangyuan Liu</div>
-      <div className='role h2'>Web Developer</div>
+      <div className='name'>Hangyuan Liu</div>
+      <div className='role h1'>Web Developer</div>
       <div className='info'>
         I build accessible, inclusive products and digital experiences for the
         web.
       </div>
     <div className='social-media'>
-          <div className='git'>
+          <div className='git w-8 hover:scale-125 transition-all'>
             <a
               href='https://github.com/llhyuan'
               target='_blank'
               rel='noreferrer'
             >
               <svg
-                className='icon fill-[--bg-color-icon]'
+                className='fill-[--bg-color-icon]'
                 viewBox='0 0 496 484'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
@@ -26,14 +26,13 @@ function Self() {
               </svg>
             </a>
           </div>
-          <div className='linkedin'>
+          <div className='linkedin w-8 hover:scale-125 transition-all'>
             <a
               href='https://www.linkedin.com/in/hangyuan-liu-a9282718b/'
               target='_blank'
               rel='noreferrer'
             >
               <svg
-                className='icon'
                 viewBox='0 0 448 512'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'

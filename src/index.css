@@ -4,15 +4,20 @@
 
 
 :root {
-  --bg-color: #504945;
+  --bg-color: #3c3836;
   --bg-color-nav: #665c54;
+  --bg-color-active: #C0C433;
   --bg-color-foot: #665c54;
-  --bg-color-icon: #ebdbb2;
-  --title-h1: #ebdbb2;
-  --title-h2: #ebdbb2;
-  --title-h3: #ebdbb2;
-  --text-primary: #ebdbb2;
-  --text-secondary: #ebdbb2;
+  --bg-color-icon: #fbf1c7;
+  --title-h1: #4EA6AC;
+  --title-h2: #BF657D;
+  --title-h3: #fbf1c7;
+  --text-primary: #fbf1c7;
+  --text-secondary: #bdae93;
+  --text-selection: #4EA6AC;
+  --text-highlight: #C0C433;
+  --text-highlight1: #ECB22C;
+  --text-highlight2: #8ec07c;
   --border-color: #ebdbb2;
   --margin-bottom: 0.8rem;
 
@@ -22,10 +27,24 @@
 * {
   box-sizing: border-box;
   color: var(--text-primary);
+  font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.025rem;
+
 }
 
 body {
   min-width: 400px;
 }
+
+*::selection {
+  color: var(--bg-color);
+  background-color: var(--text-selection);
+}
+
+.h1 {
+  color: var(--bg-color);
+  background-color: var(--title-h1);
+  margin: 0.1rem 0;
+}
+

@@ -4,7 +4,7 @@ import Exp from './Exp';
 export default function Main() {
   return (
     <article className='main'>
-      <section className='about' id='About'>
+    <section className='about' id='about'>
         <header>ABOUT</header>
         <div className='mx-8'>
           <p>
@@ -28,7 +28,10 @@ export default function Main() {
               HTML
             </span>
             <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
-              CSS/SCSS/Tailwindcss
+              CSS/SCSS
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Tailwindcss
             </span>
             <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
               JavaScript
@@ -74,12 +77,30 @@ export default function Main() {
           <div className='flex flex-wrap gap-y-4'>
             <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
               Eager to learn
-            </span><span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
-             Curious 
-            </span><span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
-             Communicative 
-            </span><span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
-             Cooperative 
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Curious
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Communicative
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-highlight2] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Cooperative
+            </span>
+          </div>
+          <p className='text-xl mt-4'>Exploring into Backend:</p>
+          <div className='flex flex-wrap gap-y-4'>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-secondary] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Go
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-secondary] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Rust
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-secondary] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              Node.js
+            </span>
+            <span className='inline-block text-[--bg-color] font-bold bg-[--text-secondary] px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color]'>
+              More to be added...
             </span>
           </div>
         </div>
@@ -90,7 +111,10 @@ export default function Main() {
         <Exp />
         <Exp />
       </section>
-      <section className='projects' id='projects'></section>
+      <section className='projects' id='projects'>
+    <header>
+      Projects
+    </header></section>
     </article>
   );
 }

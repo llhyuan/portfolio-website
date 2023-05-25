@@ -1,9 +1,17 @@
 .navbar-container {
+  --navbar-padding: 1.8rem;
+  --navbar-border: 0.25rem;
   // sticky has to be used with a specific offset.
   position: sticky;
   top: 0;
+  z-index: 999;
 
   background-color: var(--bg-color-nav);
+}
+
+.active {
+  border-bottom: var(--navbar-border) solid var(--bg-color-active);
+  font-weight: 600;
 }
 
 .navbar {
@@ -11,14 +19,10 @@
   max-width: 1024px;
   margin: 0 auto;
 
-
   .site-title {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
+    font-size: 2rem;
 
-    padding: 1.2rem 0;
-    border-bottom: 1px solid var(--text-primary);
+    padding: 1.2rem 2rem;
   }
 
   .open-button {
@@ -36,25 +40,37 @@
 
   .links {
     .link {
-      display: block;
-      padding-bottom: 0.8rem;
+      margin: 0 0.7rem;
+      padding: var(--navbar-padding) 1rem;
+      padding-bottom: calc(var(--navbar-padding) - var(--navbar-border));
 
-      text-align: center;
-
-      &:first-of-type {
-        padding-top: 0.8rem;
+      &:last-of-type {
+        margin-right: 0;
       }
-
-      &:hover,
-      &:active {
-        text-decoration: underline;
-      }
-
     }
   }
 
   .non-mobile {
     display: none;
+  }
+}
+
+.animated {
+  position: relative;
+  bottom: 6px;
+  left: 2px;
+  padding: 0 2px;
+  display: inline-block;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: initial;
   }
 }
 
@@ -72,7 +88,6 @@
 
     .site-title {
       align-self: center;
-      border: none;
       margin-bottom: 0;
       padding: 0;
     }
@@ -82,22 +97,7 @@
       align-items: center;
       justify-content: space-between;
 
-      width: min(50%, 400px);
-
-      .link {
-        margin: 0 0.7rem;
-        padding: 1.4rem 0;
-
-        &:first-of-type {
-          padding-top: 1.4rem;
-        }
-
-        &:last-of-type {
-          margin-right: 0;
-        }
-      }
     }
-
     .mobile {
       display: none;
     }

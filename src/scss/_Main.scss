@@ -1,11 +1,15 @@
 .main {
   header {
     position: sticky;
-    top: 82px;
+    top: 92px;
     font-size: 1.5rem;
     padding: 0.6rem 2rem;
     background-color: transparent;
-    backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.8rem);
+  }
+  
+  section {
+    padding-bottom: 5rem;
   }
   .about {
     p {
@@ -17,9 +21,10 @@
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
   header {
     display: none;
+    
   }
 }
