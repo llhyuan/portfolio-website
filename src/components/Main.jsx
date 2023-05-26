@@ -1,20 +1,23 @@
 import '../scss/_Main.scss';
-import Exp from './Exp';
+import { projects } from '../assets/data/projects';
+import {experience} from '../assets/data/experience';
+import Experience from './Exp';
+import Project from './Project';
 
 export default function Main() {
   return (
     <article className='main'>
-    <section className='about' id='about'>
+      <section className='about' id='about'>
         <header>ABOUT</header>
         <div className='mx-8'>
-          <p>
+          <p className='text-[--text-secondary]'>
             Back in 2012, I decided to try my hand at creating custom Tumblr
             themes and tumbled head first into the rabbit hole of coding and web
             development. Fast-forward to today, and I’ve had the privilege of
             building software for an advertising agency, a start-up, a
             student-led design studio, and a huge corporation.
           </p>
-          <p>
+          <p className='text-[--text-secondary]'>
             My main focus these days is building products and leading projects
             for our clients at Upstatement. In my free time I&apos;ve also
             released an online video course that covers everything you need to
@@ -105,16 +108,19 @@ export default function Main() {
           </div>
         </div>
       </section>
+    <section className='projects' id='projects'>
+    <header>PROJECTS</header>
+    <Project details={projects[0]} />
+    <Project details={projects[0]} />
+    <Project details={projects[0]} />
+    <Project details={projects[0]} />
+    </section>
       <section className='exp-section' id='experience'>
         <header>EXPERIENCE</header>
-        <Exp />
-        <Exp />
-        <Exp />
+    <Experience details={experience[0]} />
+    <Experience details={experience[0]} />
+
       </section>
-      <section className='projects' id='projects'>
-    <header>
-      Projects
-    </header></section>
     </article>
   );
 }

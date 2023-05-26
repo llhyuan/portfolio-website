@@ -3,11 +3,13 @@
     position: sticky;
     top: 92px;
     font-size: 1.5rem;
-    padding: 0.6rem 2rem;
+    padding: 1rem 2rem;
     background-color: transparent;
     backdrop-filter: blur(0.8rem);
+
+    z-index: 700;
   }
-  
+
   section {
     padding-bottom: 5rem;
   }
@@ -15,16 +17,18 @@
     p {
       padding-bottom: 1rem;
     }
-
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  section {
-    padding: 5rem 0;
-  }
-  header {
-    display: none;
-    
+@media only screen and (min-width: 768px) {
+  .main {
+    section {
+      padding-bottom: 2.5rem;
+      padding-top: 2.5rem;
+    }
+    header {
+      display: none;
+      top: 89px;
+    }
   }
 }

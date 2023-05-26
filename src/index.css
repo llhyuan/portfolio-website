@@ -13,14 +13,14 @@
   --title-h2: #BF657D;
   --title-h3: #fbf1c7;
   --text-primary: #fbf1c7;
-  --text-secondary: #bdae93;
+  --text-secondary: #D1C1A3;
   --text-selection: #4EA6AC;
   --text-highlight: #C0C433;
   --text-highlight1: #ECB22C;
   --text-highlight2: #8ec07c;
   --border-color: #ebdbb2;
   --margin-bottom: 0.8rem;
-
+/*#D3708B  #8ec07c*/
 }
 
 
@@ -32,6 +32,7 @@
   letter-spacing: 0.025rem;
 
 }
+
 
 body {
   min-width: 400px;
