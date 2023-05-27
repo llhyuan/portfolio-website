@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext, useRef, useEffect } from 'react';
+import { navContext } from '../components/navContext';
 
-export default function Form({setFormStatus}) {
+export default function Form({ setFormStatus }) {
+  const { setNavStatus } = useContext(navContext);
+  const formRef = useRef();
+
   const [submitBtnStatus, setSubmitBtnStatus] = useState({
     name: false,
     email: false,
@@ -8,17 +12,40 @@ export default function Form({setFormStatus}) {
   });
   const [promptStatus, setPromptStatus] = useState(false);
   const [formData, setFormData] = useState({
-    name: null,
-    email: null,
-    feedback: null,
+    name: '',
+    email: '',
+    feedback: '',
   });
 
   let showSubmitBtn = Object.values(submitBtnStatus).reduce(
     (accu, curr) => accu && curr
   );
 
+  useEffect(() => {
+    let observed = formRef.current;
+    let options = {
+      root: null,
+      rootMargin: '120px 0px 120px 0px',
+      threshold: 0.8,
+    };
+
+    let observer = new IntersectionObserver((entries) => {
+      let observedEle = entries[0];
+
+      if (observedEle.isIntersecting) {
+        setNavStatus('');
+      }
+    }, options);
+
+    observer.observe(observed);
+
+  }, [setNavStatus]);
+
   return (
-    <section className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'>
+    <section
+      ref={formRef}
+      className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'
+    >
       <header id='feedback' className='sm:text-center lg:text-left'>
         FEEDBACK
       </header>
@@ -35,6 +62,12 @@ export default function Form({setFormStatus}) {
             placeholder='Please enter your full name.'
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder:text-[--text-secondary]'
             required
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                name: e.target.value,
+              });
+            }}
             onBlur={(e) => {
               setSubmitBtnStatus({
                 ...submitBtnStatus,
@@ -55,6 +88,12 @@ export default function Form({setFormStatus}) {
             placeholder='youremail@address.com'
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder:text-[--text-secondary]'
             required
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                email: e.target.value,
+              });
+            }}
             onBlur={(e) => {
               setSubmitBtnStatus({
                 ...submitBtnStatus,
@@ -79,6 +118,12 @@ Or Any interesting development in Web Dev that you think I should check out.`}
             maxLength='500'
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder-[--text-secondary]'
             required
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                feedback: e.target.value,
+              });
+            }}
             onBlur={(e) => {
               setSubmitBtnStatus({
                 ...submitBtnStatus,
