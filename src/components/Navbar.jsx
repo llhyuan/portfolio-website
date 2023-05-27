@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import '../scss/_Navbar.scss';
 
-import { navContext } from './navContext.js';
+import { navContext } from './navContext';
 
 function Navbar() {
   const { navStatus, setNavStatus } = useContext(navContext);

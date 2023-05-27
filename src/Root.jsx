@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import './_Root.scss';
+import {navContext} from './components/navContext';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Footer from './components/Footer';
-import { navContext } from './components/navContext.js';
+
 
 export default function Root() {
-  const [navStatus, setNavStatus] = useState('about');
+  const [navStatus, setNavStatus] = useState('nav_about');
 
-  return (
+    return (
     <div className='root'>
       <navContext.Provider value={{ navStatus, setNavStatus }}>
         <Navbar />
         <Home />
-        <Footer />
       </navContext.Provider>
     </div>
   );
