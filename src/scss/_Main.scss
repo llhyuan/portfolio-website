@@ -41,7 +41,13 @@
       visibility: hidden;
       top: 89px;
     }
-    
-    
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    section:last-of-type {
+      padding-bottom: 3rem;
+    }
   }
 }

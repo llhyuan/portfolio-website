@@ -38,7 +38,6 @@ export default function Form({ setFormStatus }) {
     }, options);
 
     observer.observe(observed);
-
   }, [setNavStatus]);
 
   return (
@@ -123,6 +122,10 @@ Or Any interesting development in Web Dev that you think I should check out.`}
                 ...formData,
                 feedback: e.target.value,
               });
+              setSubmitBtnStatus({
+                ...submitBtnStatus,
+                name: e.target.validity.valid,
+              });
             }}
             onBlur={(e) => {
               setSubmitBtnStatus({
@@ -151,9 +154,10 @@ Or Any interesting development in Web Dev that you think I should check out.`}
       </form>
       {promptStatus ? (
         <div className='absolute top-0 z-[900] flex flex-col justify-center items-center w-full h-full backdrop-blur-md'>
-          <p className='text-center mb-8 text-xl'>
-            Thank you for your feedback.
+          <p className='text-center mb-4 text-4xl text-[--text-secondary]'>
+            Thank you.
           </p>
+        <p className='text-center mb-8 text-[--text-secondary]'>Your feedback has been safely received. </p>
           <button
             type='button'
             className='px-8 py-2 bg-[--text-secondary] text-[--bg-color] mx-auto w-fit active:scale-[0.98] active:transition-all'

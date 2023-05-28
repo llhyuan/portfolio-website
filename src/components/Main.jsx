@@ -118,6 +118,7 @@ export default function Main({ formStatus, setFormStatus }) {
 
       <section id='footer'>
         <div className='bg-[--bg-color-nav] py-4 lg:bg-[--bg-color] lg:py-0'>
+    <p className='text-[1rem] text-[--text-secondary] px-8 pb-1'>About this site:</p>
           <p className='text-[0.9rem] text-[--text-secondary] px-8'>
             Design Approach: Hand sketching on iPad (
             <a

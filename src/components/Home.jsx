@@ -10,17 +10,17 @@ function Home() {
 
   return (
     <div className='home'>
-      <div className='self-container flex flex-col pb-6 lg:pb-0 lg:min-h-[92vh]'>
+      <div className='self-container flex flex-col pb-6 lg:pb-0 lg:min-h-[96vh]'>
         <Self />
         <div className='mt-auto'>
           <a
-            className='lg:block bg-[--text-secondary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 mb-4 lg:mt-auto ml-8 mr-4 hover:translate-x-2 hover:cursor-pointer transition-all'
+            className='lg:block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 mb-4 lg:mt-auto ml-8 mr-4 hover:translate-x-2 hover:cursor-pointer transition-all'
             href='mailto:lhyuan.liu21@icloud.com'
           >
             Contact Me
           </a>
           <a
-            className='lg:block bg-[--text-secondary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 mb-4 ml-4 lg:ml-8 hover:translate-x-2 hover:cursor-pointer transition-all'
+            className='lg:block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 mb-4 ml-4 lg:ml-8 hover:translate-x-2 hover:cursor-pointer transition-all'
             href='#feedback'
     onClick={()=>{
       setFormStatus(true);
