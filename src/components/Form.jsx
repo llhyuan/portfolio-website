@@ -21,6 +21,14 @@ export default function Form({ setFormStatus }) {
     (accu, curr) => accu && curr
   );
 
+  function setOutline(e) {
+    if (e.target.validity.valid) {
+      e.target.style.outlineColor = 'var(--outline-valid)';
+    } else {
+      e.target.style.outlineColor = 'var(--outline-invalid)';
+    }
+  }
+
   useEffect(() => {
     let observed = formRef.current;
     let options = {
@@ -45,7 +53,7 @@ export default function Form({ setFormStatus }) {
       ref={formRef}
       className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'
     >
-      <header id='feedback' className='sm:text-center lg:text-left'>
+      <header id="feedback_header"className='sm:text-center lg:text-left'>
         FEEDBACK
       </header>
       <form action='' method='GET' className='flex flex-col px-8'>
@@ -62,12 +70,18 @@ export default function Form({ setFormStatus }) {
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder:text-[--text-secondary]'
             required
             onChange={(e) => {
+              setOutline(e);
               setFormData({
                 ...formData,
                 name: e.target.value,
               });
+              setSubmitBtnStatus({
+                ...submitBtnStatus,
+                name: e.target.validity.valid,
+              });
             }}
             onBlur={(e) => {
+              setOutline(e);
               setSubmitBtnStatus({
                 ...submitBtnStatus,
                 name: e.target.validity.valid,
@@ -88,12 +102,18 @@ export default function Form({ setFormStatus }) {
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder:text-[--text-secondary]'
             required
             onChange={(e) => {
+              setOutline(e);
               setFormData({
                 ...formData,
                 email: e.target.value,
               });
+              setSubmitBtnStatus({
+                ...submitBtnStatus,
+                email: e.target.validity.valid,
+              });
             }}
             onBlur={(e) => {
+              setOutline(e);
               setSubmitBtnStatus({
                 ...submitBtnStatus,
                 email: e.target.validity.valid,
@@ -118,16 +138,18 @@ Or Any interesting development in Web Dev that you think I should check out.`}
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder-[--text-secondary]'
             required
             onChange={(e) => {
+              setOutline(e);
               setFormData({
                 ...formData,
                 feedback: e.target.value,
               });
               setSubmitBtnStatus({
                 ...submitBtnStatus,
-                name: e.target.validity.valid,
+                feedback: e.target.validity.valid,
               });
             }}
             onBlur={(e) => {
+              setOutline(e);
               setSubmitBtnStatus({
                 ...submitBtnStatus,
                 feedback: e.target.validity.valid,
@@ -154,10 +176,12 @@ Or Any interesting development in Web Dev that you think I should check out.`}
       </form>
       {promptStatus ? (
         <div className='absolute top-0 z-[900] flex flex-col justify-center items-center w-full h-full backdrop-blur-md'>
-          <p className='text-center mb-4 text-4xl text-[--text-secondary]'>
+          <p className='text-center mb-4 text-4xl text-[--text-primary]'>
             Thank you.
           </p>
-        <p className='text-center mb-8 text-[--text-secondary]'>Your feedback has been safely received. </p>
+          <p className='text-center mb-8 text-[--text-secondary]'>
+            Your feedback has been safely received.{' '}
+          </p>
           <button
             type='button'
             className='px-8 py-2 bg-[--text-secondary] text-[--bg-color] mx-auto w-fit active:scale-[0.98] active:transition-all'

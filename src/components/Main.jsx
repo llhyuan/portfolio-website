@@ -42,17 +42,19 @@ export default function Main({ formStatus, setFormStatus }) {
         <header>ABOUT</header>
         <div className='mx-8'>
           <p className='text-[--text-secondary]'>
-            Back in 2012, I decided to try my hand at creating custom Tumblr
-            themes and tumbled head first into the rabbit hole of coding and web
-            development. Fast-forward to today, and I’ve had the privilege of
-            building software for an advertising agency, a start-up, a
-            student-led design studio, and a huge corporation.
+            Learning and evolving, constantly and fast, is one of the most important
+            skill I acquired from being an English-Chinese translator and
+            interpreter. Following that, driven by my curiosity, I became a
+            frontend developer.
           </p>
           <p className='text-[--text-secondary]'>
-            My main focus these days is building products and leading projects
-            for our clients at Upstatement. In my free time I&apos;ve also
-            released an online video course that covers everything you need to
-            know to build a web app with the Spotify API.
+            My current tech stack is shown in the section below.
+          </p>
+          <p className='text-[--text-secondary]'>
+            However, I adopt a task-first approach. Each project I did, I picked
+            up skills and tools required to finish the project. And I’m ready
+            to and capable of picking up whatever tools that are needed to get
+            the job done.
           </p>
         </div>
         <div className='px-8'>
@@ -114,11 +116,15 @@ export default function Main({ formStatus, setFormStatus }) {
         <Experience key={0} details={experience[0]} />
         <Experience key={1} details={experience[0]} />
       </section>
-      {formStatus ? <Form setFormStatus={setFormStatus} /> : ''}
+      <section id='feedback'>
+        {formStatus ? <Form setFormStatus={setFormStatus} /> : ''}
+      </section>
 
       <section id='footer'>
         <div className='bg-[--bg-color-nav] py-4 lg:bg-[--bg-color] lg:py-0'>
-    <p className='text-[1rem] text-[--text-secondary] px-8 pb-1'>About this site:</p>
+          <p className='text-[1rem] text-[--text-secondary] px-8 pb-1'>
+            About this site:
+          </p>
           <p className='text-[0.9rem] text-[--text-secondary] px-8'>
             Design Approach: Hand sketching on iPad (
             <a
@@ -177,14 +183,16 @@ export default function Main({ formStatus, setFormStatus }) {
             >
               Gruvbox Material
             </a>
-            , experimented around using  <a
+            , experimented around using{' '}
+            <a
               className='text-[0.9rem] text-[--text-secondary] underline underline-offset-[2px] hover:text-[--text-primary]'
               href='https://palettte.app'
               target='_blank'
               rel='noreferrer'
             >
               Palettte
-            </a>.
+            </a>
+            .
           </p>
           <p className='text-[0.9rem] text-[--text-secondary] px-8 mt-4'>
             &#169; Hangyuan Liu 2023

@@ -5,11 +5,7 @@ function Self() {
     <div className='self'>
       <div className='name'>Hangyuan Liu</div>
       <div className='role h1'>Web Developer</div>
-      <div className='info'>
-        I build accessible, inclusive products and digital experiences for the
-        web. And yes, I&apos;m a Neovim user. And yes, it does live up to the
-        hype.
-      </div>
+      <div className='info'>Hi, I’m a frontend developer <br/>with a curious mind and insatiable desire to learn and evolve.</div>
       <div className='social-media'>
         <div className='git w-8 hover:scale-125 transition-all'>
           <a href='https://github.com/llhyuan' target='_blank' rel='noreferrer'>

@@ -23,19 +23,7 @@
     font-size: 2rem;
 
     padding: 1.2rem 2rem;
-  }
-
-  .open-button {
-    position: absolute;
-    font-size: 1.2rem;
-    right: 1rem;
-    top: 1.9rem;
-  }
-  .close-button {
-    font-size: 1.5rem;
-    position: absolute;
-    right: 1rem;
-    top: 1.8rem;
+    
   }
 
   .links {
@@ -55,7 +43,7 @@
   }
 }
 
-.animated {
+.blinking {
   position: relative;
   bottom: 6px;
   left: 2px;
@@ -74,13 +62,34 @@
   }
 }
 
+.revealing {
+  animation-name: reveal;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  transition-property: all;
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  15%{
+    width: var(--content-width);
+  }
+  90% {
+
+    width: var(--content-width);
+  }
+  100% {
+    width: 0;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .navbar-container {
     padding: 0 2rem;
   }
   .navbar {
     display: flex;
-    justify-content: space-between;
 
     .non-mobile {
       display: initial;
@@ -89,7 +98,8 @@
     .site-title {
       align-self: center;
       margin-bottom: 0;
-      padding: 0;
+      margin-right: auto;
+      width: 25rem;
     }
 
     .links {
