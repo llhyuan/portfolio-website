@@ -9,15 +9,15 @@ export default function Project({ details }) {
           src={details['image']}
           alt='project image'
         />
-        <div className='links group-hover:visible group-hover:transition-all'>
+        <div className='links transition-all ease-in duration-75 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:transition-all'>
           <a
-            className='mt-auto hover:translate-x-[-5px] hover:transition-all'
+            className='mt-auto transition-all ease-out duration-75 hover:translate-x-[2px] hover:translate-y-[1px] hover:transition-all'
             href={details['github']}
           >
             GitHub Repo
           </a>
           <a
-            className='mb-auto hover:translate-x-[-5px] hover:transition-all'
+            className='mb-auto transition-all ease-out duration-75 hover:translate-x-[2px] hover:translate-y-[1px] hover:transition-all'
             href={details['livesite']}
           >
             Live Site
@@ -27,11 +27,11 @@ export default function Project({ details }) {
       <div className='project-detail mt-6'>
         <p className='text-[1.4rem]'>{details['name']}</p>
         <p className='mt-4 text-[--text-secondary]'>{details['content']} </p>
-        <details className='mt-4'>
-          <summary className='mb-2' open>
+    <details className='mt-4'>
+          <summary className='mb-2'>
             Tools:
           </summary>
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex flex-wrap gap-2 transition-all '>
             {details['tools'].map((item, index) => (
               <p
                 key={index}

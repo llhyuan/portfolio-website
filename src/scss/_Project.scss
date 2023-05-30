@@ -18,14 +18,17 @@
       visibility: hidden;
 
       a {
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.8rem;
         background-color: var(--text-selection);
         color: var(--bg-color);
         text-decoration: underline;
+        text-underline-offset: 4px;
       }
     }
   }
+
 }
+
 
 @media only screen and (min-width: 640px) {
   .project {
@@ -44,7 +47,8 @@
         visibility: visible;
         height: auto;
         align-items: flex-end;
-        row-gap:0.5rem;
+        row-gap: 0.5rem;
+        opacity:1;
 
         a {
           padding: 0.2rem 0.3rem;

@@ -1,22 +1,19 @@
 @media only screen and (min-width: 1024px) {
   .home {
     position: relative;
-    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    max-width: 1440px;
   }
 
   .main-container {
-    width: 60%;
-    margin-left: 40vw;
-    margin-top: 10px;
-
+    flex: 3;
   }
 
   .self-container {
-    padding-top: 7rem;
-    position: fixed;
-    top: 0;
-
-    width: 40%;
+    flex: 2;
+    position: relative;
+    padding-bottom: 0;
+    height: 90vh;
   }
 }

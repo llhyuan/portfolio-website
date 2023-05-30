@@ -1,11 +1,14 @@
 import '../scss/_Self.scss';
 
-function Self() {
+function Self({setFormStatus}) {
   return (
-    <div className='self'>
+    <div className='self flex flex-col'>
       <div className='name'>Hangyuan Liu</div>
       <div className='role h1'>Web Developer</div>
-      <div className='info'>Hi, I’m a frontend developer <br/>with a curious mind and insatiable desire to learn and evolve.</div>
+      <div className='info'>
+        Hi, I’m a frontend developer <br />
+        with a curious mind and insatiable desire to learn and evolve.
+      </div>
       <div className='social-media'>
         <div className='git w-8 hover:scale-125 transition-all'>
           <a href='https://github.com/llhyuan' target='_blank' rel='noreferrer'>
@@ -90,6 +93,23 @@ function Self() {
             </svg>
           </a>
         </div>
+      </div>
+      <div className='mt-auto flex lg:flex-col'>
+        <a
+          className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 lg:mt-auto mr-4 hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
+          href='mailto:lhyuan.liu21@icloud.com'
+        >
+          Contact Me
+        </a>
+        <a
+          className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
+          href='#feedback_header'
+          onClick={() => {
+            setFormStatus(true);
+          }}
+        >
+          Feedback
+        </a>
       </div>
     </div>
   );

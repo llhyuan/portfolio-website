@@ -30,6 +30,7 @@ export default function Main({ formStatus, setFormStatus }) {
 
       if (observedEle.isIntersecting) {
         setNavStatus('nav_' + observedEle.target.id);
+        console.log('nav_' + observedEle.target.id);
       }
     }, options);
 
@@ -42,19 +43,19 @@ export default function Main({ formStatus, setFormStatus }) {
         <header>ABOUT</header>
         <div className='mx-8'>
           <p className='text-[--text-secondary]'>
-            Learning and evolving, constantly and fast, is one of the most important
-            skill I acquired from being an English-Chinese translator and
-            interpreter. Following that, driven by my curiosity, I became a
+            Learning and evolving, constantly and fast, is one of the most
+            important skill I acquired from being an English-Chinese translator
+            and interpreter. Following that, driven by my curiosity, I became a
             frontend developer.
           </p>
           <p className='text-[--text-secondary]'>
-            My current tech stack is shown in the section below.
+            I adopt a task-first approach. Each project I did, I picked
+            up skills and tools required to finish the project. And I’m ready to
+            and capable of picking up whatever tools that are needed to get the
+            job done.
           </p>
           <p className='text-[--text-secondary]'>
-            However, I adopt a task-first approach. Each project I did, I picked
-            up skills and tools required to finish the project. And I’m ready
-            to and capable of picking up whatever tools that are needed to get
-            the job done.
+            My current tech stack includes: 
           </p>
         </div>
         <div className='px-8'>
