@@ -10,7 +10,7 @@ export default function Root() {
   const [navStatus, setNavStatus] = useState('nav_about');
 
     return (
-    <div className='root'>
+    <div className='relative root'>
       <navContext.Provider value={{ navStatus, setNavStatus }}>
         <Navbar />
         <Home />

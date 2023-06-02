@@ -1,12 +1,16 @@
 import '../scss/_Project.scss';
+import Details from './Details';
 
 export default function Project({ details }) {
+  const imgURL = new URL(details['image'], import.meta.url).href;
+  const summary = 'Tech/Tools';
+
   return (
     <div className='project p-8'>
       <div className='group relative project-img mx-auto'>
         <img
           className='border-[--text-secondary] border-2'
-          src={details['image']}
+          src={imgURL}
           alt='project image'
         />
         <div className='links transition-all ease-in duration-75 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:transition-all'>
@@ -27,22 +31,20 @@ export default function Project({ details }) {
       <div className='project-detail mt-6'>
         <p className='text-[1.4rem]'>{details['name']}</p>
         <p className='mt-4 text-[--text-secondary]'>{details['content']} </p>
-    <details className='mt-4'>
-          <summary className='mb-2'>
-            Tools:
-          </summary>
-          <div className='flex flex-wrap gap-2 transition-all '>
-            {details['tools'].map((item, index) => (
-              <p
-                key={index}
-                className='px-2 py-0.5 bg-[--text-secondary] text-[--bg-color] sm:text-[0.9rem]'
-              >
-                {item}
-              </p>
-            ))}
-          </div>
-        </details>
+        <ul className='my-2'>
+          {details['points'].map((item, index) => (
+            <li
+              key={index}
+              className='text-[--text-secondary] pl-4 text-[0.9rem]'
+            >
+              <span className='text-[--text-secondary] pr-2'>&#8226;</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <Details details={details} summary={summary}/>
       </div>
     </div>
   );
 }
+

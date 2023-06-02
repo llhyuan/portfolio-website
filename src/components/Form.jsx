@@ -51,12 +51,16 @@ export default function Form({ setFormStatus }) {
   return (
     <section
       ref={formRef}
-      className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'
+      className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px] '
     >
-      <header id="feedback_header"className='sm:text-center lg:text-left'>
-        FEEDBACK
+      <header id='feedback_header' className='sm:text-center lg:text-left'>
+        Leave A Message
       </header>
-      <form action='' method='GET' className='flex flex-col px-8'>
+      <form
+        action='mailto:lhyuan.liu21@icloud.com'
+        method='GET'
+        className='flex flex-col px-8 '
+      >
         <div className='flex flex-col my-6'>
           <label htmlFor='name' className='mb-2 text-[--text-secondary]'>
             Name:{' '}
@@ -174,28 +178,30 @@ Or Any interesting development in Web Dev that you think I should check out.`}
           {!showSubmitBtn ? 'Form Incomplete' : 'Submit'}
         </button>
       </form>
-      {promptStatus ? (
-        <div className='absolute top-0 z-[900] flex flex-col justify-center items-center w-full h-full backdrop-blur-md'>
-          <p className='text-center mb-4 text-4xl text-[--text-primary]'>
-            Thank you.
-          </p>
-          <p className='text-center mb-8 text-[--text-secondary]'>
-            Your feedback has been safely received.{' '}
-          </p>
-          <button
-            type='button'
-            className='px-8 py-2 bg-[--text-secondary] text-[--bg-color] mx-auto w-fit active:scale-[0.98] active:transition-all'
-            onClick={() => {
-              setFormStatus(false);
-              setPromptStatus(!promptStatus);
-            }}
-          >
-            Close
-          </button>
-        </div>
-      ) : (
-        ''
-      )}
+      <div
+        className={
+          'absolute top-0 ' +
+          (promptStatus ? 'flex' : 'hidden') +
+          ' flex-col justify-center items-center w-full h-full backdrop-blur-md '
+        }
+      >
+        <p className='text-center mb-4 text-4xl text-[--text-primary]'>
+          Thank you.
+        </p>
+        <p className='text-center mb-8 text-[--text-secondary]'>
+          Your feedback has been safely received.{' '}
+        </p>
+        <button
+          type='button'
+          className='px-8 py-2 bg-[--text-secondary] text-[--bg-color] mx-auto w-fit active:scale-[0.98] active:transition-all'
+          onClick={() => {
+            setFormStatus(false);
+            setPromptStatus(!promptStatus);
+          }}
+        >
+          Close
+        </button>
+      </div>
     </section>
   );
 }

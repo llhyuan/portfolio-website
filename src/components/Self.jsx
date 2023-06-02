@@ -6,7 +6,7 @@ function Self({setFormStatus}) {
       <div className='name'>Hangyuan Liu</div>
       <div className='role h1'>Web Developer</div>
       <div className='info'>
-        Hi, I’m a frontend developer <br />
+        Hi, Iâm a frontend developer <br />
         with a curious mind and insatiable desire to learn and evolve.
       </div>
       <div className='social-media'>
@@ -108,7 +108,7 @@ function Self({setFormStatus}) {
             setFormStatus(true);
           }}
         >
-          Feedback
+          Leave A Message
         </a>
       </div>
     </div>
@@ -116,3 +116,4 @@ function Self({setFormStatus}) {
 }
 
 export default Self;
+
