@@ -8,12 +8,14 @@
 
   .main-container {
     flex: 3;
+    overflow: scroll;
+    height: 89vh;
+    scroll-behavior: smooth;
   }
 
   .self-container {
     flex: 2;
-    position: relative;
     padding-bottom: 0;
-    height: 90vh;
+    
   }
 }

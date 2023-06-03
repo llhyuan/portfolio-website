@@ -11,15 +11,14 @@
   .info {
     padding: 1rem 0;
   }
-.social-media {
+  .social-media {
     display: flex;
     justify-content: space-between;
     width: 180px;
-    
+
     padding: 1rem 0;
   }
 }
-
 
 @media only screen and (min-width: 768px) {
   .self {
@@ -31,10 +30,9 @@
 
 @media only screen and (min-width: 1024px) {
   .self {
-   position: fixed; 
-   top: 7rem;
-   width: 40%;
-   max-width: 600px;
-   height: 83vh;
+    max-width: 600px;
+    height: 85vh;
+    position: relative;
+    top: 1.7rem;
   }
 }

@@ -20,7 +20,10 @@ function Navbar() {
   }
 
   useEffect(() => {
+    console.log(revealingContent.current);
+    console.log(revealingContent.current.offsetWidth);
     let contentWidth = String(revealingContent.current.offsetWidth + 3);
+    console.log(contentWidth);
     revealingContent.current.parentElement.style.setProperty(
       '--content-width',
       contentWidth + 'px'
@@ -37,7 +40,7 @@ function Navbar() {
         >
           &lt;
           <span className='relative inline-block bottom-[-0.6rem] overflow-hidden w-0 transition-all'>
-            <span ref={revealingContent} className='text-[2rem]'>
+            <span ref={revealingContent} className='text-[2rem] pr-1'>
               {quality}
             </span>
           </span>

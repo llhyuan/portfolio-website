@@ -6,11 +6,12 @@ import Main from './Main';
 function Home() {
   const [formStatus, setFormStatus] = useState(false);
 
+  
   return (
     <div className='home'>
-      <div className='self-container'>
+      <div className='self-container flex flex-col'>
         <Self setFormStatus={setFormStatus} />
-      </div>
+          </div>
       <div className='main-container'>
         <Main formStatus={formStatus} setFormStatus={setFormStatus} />
       </div>

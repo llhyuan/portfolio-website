@@ -11,7 +11,7 @@ export default function NavbarItem({ tag }) {
   }
 
   return (
-    <a id={id} href="#about" className='group block mx-[0.7rem]' onClick={clickHandler}>
+    <a id={id} href={"#"+tag.toLowerCase()} className='group block mx-[0.7rem]' onClick={clickHandler}>
       <div className='flex mx-2 pb-[calc(var(--navbar-padding)-0.25rem)] pt-[--navbar-padding]'>
         <p
           className={

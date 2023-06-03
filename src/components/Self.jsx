@@ -1,12 +1,14 @@
 import '../scss/_Self.scss';
 
-function Self({setFormStatus}) {
+
+function Self({ setFormStatus }) {
+
   return (
     <div className='self flex flex-col'>
       <div className='name'>Hangyuan Liu</div>
       <div className='role h1'>Web Developer</div>
       <div className='info'>
-        Hi, Iâm a frontend developer <br />
+        Hi, I&apos;am frontend developer <br />
         with a curious mind and insatiable desire to learn and evolve.
       </div>
       <div className='social-media'>
@@ -116,4 +118,3 @@ function Self({setFormStatus}) {
 }
 
 export default Self;
-
