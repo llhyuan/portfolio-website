@@ -39,7 +39,7 @@ export default function Details({ details, summary }) {
         <div
           ref={dropdownRef}
           className={
-            'flex flex-wrap gap-2 ml-5 max-h-[--max-height] transition-all ease-in-out duration-100 ' +
+            'flex flex-wrap gap-2 ml-5 pb-1 max-h-[--max-height] transition-all ease-in-out duration-100 ' +
             (dropdownStatus ? '' : 'content-close')
           }
         >

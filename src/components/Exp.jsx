@@ -1,10 +1,36 @@
+import { useEffect, useRef, useState } from 'react';
 import '../scss/_Exp.scss';
 import Details from './Details';
 export default function Experience({ details }) {
   const summary = 'Transferable Skills';
+  const [isInsight, setInSight] = useState(false);
+  const aniRef = useRef(null);
+
+  useEffect(() => {
+    let options = {
+      root: null,
+      rootMargin: '0px 0px 250px 0px',
+    };
+
+    let observer = new IntersectionObserver((entries) => {
+      let observed = entries[0];
+      if (observed.isIntersecting) {
+        setInSight(true);
+        observer.unobserve(aniRef.current);
+      }
+    }, options);
+
+    observer.observe(aniRef.current);
+  }, []);
 
   return (
-    <div className='group exp p-8 hover:transition-all sm:flex sm:justify-between'>
+    <div
+      ref={aniRef}
+      className={
+        'group exp p-8 hover:transition-all sm:flex sm:justify-between ' +
+        (isInsight ? 'loading-animation' : '')
+      }
+    >
       <div className='mb-4 sm:max-w-[30%]'>
         <p className='text-[1rem] pb-[0.8rem]'>{details['period']}</p>
         <p className='text-[1.3rem]'>{details['title']}</p>

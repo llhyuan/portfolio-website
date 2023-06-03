@@ -1,6 +1,27 @@
 export const projects = [
   {
     id: 0,
+    name: 'Portfolio template',
+    image: '../assets/project-image/portfolio.png',
+    github: 'https://github.com/llhyuan/portfolio-website',
+    livesite: 'https://llhyuan.github.io/portfolio-website/',
+    content:
+      'This is a geeky personal portfolio inspired by neovim and gruvbox material. It can be easily cutomized to fit in your own narrative.',
+    points: [
+      '100% self-written, reusable components to mitigate to the repetitive clottering mess of tailwinds.',
+      'React hooks (useRef and useEffect) are paired up with intersection observer to  achieve the dynamic nav section, reacting to page scroll.',
+      'A sprinkle of JavaScript and some dark magic is used for the easter egg animation in the navbar.',
+    ],
+    'Tech/Tools': [
+      'react',
+      'javascript',
+      'tailwindcss',
+      'reusable react components',
+      'gsap'
+    ],
+  },
+  {
+    id: 1,
     name: 'Space Tourism Website',
     image: '../assets/project-image/space.png',
     github: 'https://github.com/llhyuan/Space-tourism-website',
@@ -13,21 +34,6 @@ export const projects = [
       'Communication among components managed with useContext and useEffect',
     ],
     'Tech/Tools': ['scss', 'react', 'react router', 'fontawsome'],
-  },
-  {
-    id: 1,
-    name: 'Portfolio template',
-    image: '../assets/project-image/portfolio.png',
-    github: 'https://github.com/llhyuan/portfolio-website',
-    livesite: 'https://llhyuan.github.io/portfolio-website/',
-    content:
-      'This is a geeky personal portfolio inspired by neovim and gruvbox material. It can be easily cutomized to fit in your own narrative.',
-    points: [
-      '100% self-written, reusable components to mitigate to the repetitive clottering mess of tailwinds.',
-      'React hooks (useRef and useEffect) are paired up with intersection observer to  achieve the dynamic nav section, reacting to page scroll.',
-      'A sprinkle of JavaScript and some dark magic is used for the easter egg animation in the navbar.',
-    ],
-    'Tech/Tools': ['react', 'javascript', 'tailwindcss', 'reusable react components'],
   },
   {
     id: 2,
@@ -52,4 +58,3 @@ export const projects = [
     'Tech/Tools': ['html', 'vanila css'],
   },
 ];
-

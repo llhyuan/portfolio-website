@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import '../scss/_Project.scss';
 import Details from './Details';
 
@@ -5,8 +6,30 @@ export default function Project({ details }) {
   const imgURL = new URL(details['image'], import.meta.url).href;
   const summary = 'Tech/Tools';
 
+  const aniRef = useRef(null);
+  const [inSight, setInSight] = useState(false);
+
+  useEffect(() => {
+    let options = {
+      root: null,
+      rootMargin: '0px 0px 250px 0px',
+    };
+    let observer = new IntersectionObserver((entries) => {
+      let observed = entries[0];
+      if (observed.isIntersecting) {
+        setInSight(true);
+        observer.unobserve(aniRef.current);
+      }
+    }, options);
+
+    observer.observe(aniRef.current);
+  }, []);
+
   return (
-    <div className='project p-8'>
+    <div
+      ref={aniRef}
+      className={'project p-8 ' + (inSight ? 'loading-animation' : '')}
+    >
       <div className='group relative project-img mx-auto'>
         <img
           className='border-[--text-secondary] border-2'
@@ -42,9 +65,8 @@ export default function Project({ details }) {
             </li>
           ))}
         </ul>
-        <Details details={details} summary={summary}/>
+        <Details details={details} summary={summary} />
       </div>
     </div>
   );
 }
-
