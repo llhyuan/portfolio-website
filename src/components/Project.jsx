@@ -10,13 +10,13 @@ export default function Project({ details }) {
   //const imgURL = new URL(details['image'], import.meta.url).href;
   const summary = 'Tech/Tools';
 
-  function imgSource(id){
+  function imgSource(id) {
     switch (id) {
       case 0:
         return imgPortfolio;
       case 1:
         return imgSpace;
-      case 2: 
+      case 2:
         return imgComponent;
       case 3:
         return imgGift;
@@ -27,7 +27,7 @@ export default function Project({ details }) {
   const [inSight, setInSight] = useState(false);
 
   useEffect(() => {
-        let observer = new IntersectionObserver((entries) => {
+    let observer = new IntersectionObserver((entries) => {
       let observed = entries[0];
       if (observed.isIntersecting) {
         setInSight(true);
@@ -51,13 +51,13 @@ export default function Project({ details }) {
         />
         <div className='links transition-all ease-in duration-75 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:transition-all'>
           <a
-            className='mt-auto transition-all ease-out duration-75 hover:translate-x-[2px] hover:translate-y-[1px] hover:transition-all'
+            className='mt-auto transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all'
             href={details['github']}
           >
             GitHub Repo
           </a>
           <a
-            className='mb-auto transition-all ease-out duration-75 hover:translate-x-[2px] hover:translate-y-[1px] hover:transition-all'
+            className='mb-auto transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all'
             href={details['livesite']}
           >
             Live Site

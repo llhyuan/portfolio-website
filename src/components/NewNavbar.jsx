@@ -16,13 +16,13 @@ export default function NewNavbar() {
         '#slash',
         {
           scale: '25',
-          rotate: '-20deg',
+          rotate: '-26deg',
           opacity: '0',
           duration: '0.3',
         },
         {
           scale: '1',
-          rotate: '-20deg',
+          rotate: '-26deg',
           opacity: '1',
           ease: CustomEase.create('custom', '0.64,0.5,0.91,0.56'),
         }
