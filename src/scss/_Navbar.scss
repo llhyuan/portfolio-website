@@ -15,7 +15,6 @@
   margin: 0 auto;
 
   .site-title {
-    font-size: 2rem;
     padding: 1.2rem 2rem;
   }
 
@@ -28,7 +27,7 @@
   position: relative;
   bottom: 6px;
   left: 2px;
-  padding: 0 2px;
+  padding: 0 1px;
   display: inline-block;
   animation-name: blink;
   animation-duration: 1s;
@@ -81,7 +80,7 @@
       margin-bottom: 0;
       margin-right: auto;
       padding: 0 2rem;
-      width: 25rem;
+      width: 30rem;
       overflow-x: visible;
     }
 

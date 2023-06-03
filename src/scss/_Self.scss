@@ -1,13 +1,6 @@
 .self {
-  padding: 2rem;
-  .name {
-    font-size: 2.8rem;
-  }
-  .role {
-    font-size: 1.8rem;
-    padding: 0 0.2rem;
-    width: fit-content;
-  }
+  
+  
   .info {
     padding: 1rem 0;
   }
@@ -20,13 +13,6 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .self {
-    .name {
-      font-size: 3rem;
-    }
-  }
-}
 
 @media only screen and (min-width: 1024px) {
   .self {

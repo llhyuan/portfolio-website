@@ -2,9 +2,9 @@ import '../scss/_Self.scss';
 
 function Self({ setFormStatus }) {
   return (
-    <div className='self flex flex-col'>
-      <div className='name'>Hangyuan Liu</div>
-      <div className='role h1'>Web Developer</div>
+    <div className='self flex flex-col p-8'>
+      <div className='name text-[2.8rem] mb-2 md:text-[3rem]'>Hangyuan Liu</div>
+      <div className='text-[2rem] font-mono p-2 w-fit text-[--bg-color] bg-[--text-selection] '>Web Developer</div>
       <div className='info'>
         Hi, I&apos;am frontend developer <br />
         with a curious mind and insatiable desire to learn and evolve.

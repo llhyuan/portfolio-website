@@ -88,7 +88,7 @@ export default function NewNavbar() {
         className='h-[100vh] flex justify-center items-center bg-[--bg-color-nav]'
       >
         <div className='group flex'>
-          <p id='left' className='text-[30vw] text-[--text-primary]'>
+          <p id='left' className='text-[30vw] text-[--text-primary] font-mono'>
             &lt;
           </p>
           <p id='quality' className='text-[30vw] mr-1'></p>
@@ -101,10 +101,10 @@ export default function NewNavbar() {
           <p id='space' className='text-[21vw] text-transparent'>
             _
           </p>
-          <p id='slash' className='text-[30vw] text-[--text-primary]'>
+          <p id='slash' className='text-[30vw] text-[--text-primary] font-mono'>
             /
           </p>
-          <p id='right' className='text-[30vw] text-[--text-primary]'>
+          <p id='right' className='text-[30vw] text-[--text-primary] font-mono'>
             &gt;
           </p>
         </div>

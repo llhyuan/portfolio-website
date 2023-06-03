@@ -8,9 +8,9 @@ function Navbar() {
   const revealingContent = useRef();
   const [quality, setQuality] = useState(qualities[0]);
 
-
   function mouseEnterHandler(e) {
-    e.target.firstElementChild.classList.add('revealing');
+    console.log(e.target);
+    e.target.children[1].classList.add('revealing');
   }
 
   function animationEndHandler(e) {
@@ -31,20 +31,21 @@ function Navbar() {
     <div className='navbar-container'>
       <div className='navbar'>
         <div
-          className='group site-title relative bottom-[0.3rem]'
+          className='group site-title relative bottom-[0.3rem] font-mono'
           onMouseEnter={mouseEnterHandler}
           onAnimationEnd={animationEndHandler}
         >
-          &lt;
-          <span className='relative inline-block bottom-[-0.6rem] overflow-hidden w-0 transition-all'>
-            <span ref={revealingContent} className='text-[2rem] pr-1'>
+          <span className='text-[2rem] font-mono'>&lt;</span>
+          <span className='relative inline-block bottom-[-0.7rem] overflow-hidden w-0 transition-all'>
+            <span ref={revealingContent} className='text-[2rem] font-mono pr-1'>
               {quality}
             </span>
           </span>
           <span className='blinking text-transparent bg-[--text-primary]'>
             _
           </span>
-          <span className='text-transparent'>_</span>/&gt;
+          <span className='text-transparent'>_</span><span className='text-[2rem] font-mono'>/</span>
+          <span className='text-[2rem] font-mono'>&gt;</span>
         </div>
         <nav className='links non-mobile'>
           <NavbarItem tag={'About'} />

@@ -10,10 +10,7 @@
   --bg-color-disabled: #ED503D;
   --bg-color-foot: #665c54;
   --bg-color-icon: #fbf1c7;
-  --title-h1: #4EA6AC;
-  --title-h2: #BF657D;
-  --title-h3: #fbf1c7;
-  --text-primary: #fbf1c7;
+    --text-primary: #fbf1c7;
   --text-secondary: #D1C1A3;
   --text-selection: #4EA6AC;
   --text-highlight: #C0C433;
@@ -21,8 +18,7 @@
   --text-highlight2: #8ec07c;
   --border-color: #ebdbb2;
   --margin-bottom: 0.8rem;
-/*#D3708B  #8ec07c*/
-  --content-width: 160px;
+  --content-width: 140px;
   --outline-valid: #8ec07c;
   --outline-invalid: #ed503d;
 }

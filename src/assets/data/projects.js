@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 0,
     name: 'Portfolio template',
-    image: '../assets/project-image/portfolio.png',
+    image: '../assets/project-image/portfolio.jpg',
     github: 'https://github.com/llhyuan/portfolio-website',
     livesite: 'https://llhyuan.github.io/portfolio-website/',
     content:
@@ -23,7 +23,7 @@ export const projects = [
   {
     id: 1,
     name: 'Space Tourism Website',
-    image: '../assets/project-image/space.png',
+    image: '../assets/project-image/space.jpg',
     github: 'https://github.com/llhyuan/Space-tourism-website',
     livesite: 'https://llhyuan.github.io/Space-tourism-website/',
     content:
@@ -38,7 +38,7 @@ export const projects = [
   {
     id: 2,
     name: 'Responsive Pricing Component',
-    image: '../assets/project-image/component.png',
+    image: '../assets/project-image/component.jpg',
     github: 'https://github.com/llhyuan/Pricing-component',
     livesite: 'https://llhyuan.github.io/Pricing-component/',
     content:
@@ -49,7 +49,7 @@ export const projects = [
   {
     id: 3,
     name: 'Gift Shop Landing Page',
-    image: '../assets/project-image/giftshop.png',
+    image: '../assets/project-image/giftshop.jpg',
     github: 'https://github.com/llhyuan/gift-shop',
     livesite: 'https://llhyuan.github.io/gift-shop/',
     content:
