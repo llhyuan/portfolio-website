@@ -20,10 +20,7 @@ function Navbar() {
   }
 
   useEffect(() => {
-    console.log(revealingContent.current);
-    console.log(revealingContent.current.offsetWidth);
     let contentWidth = String(revealingContent.current.offsetWidth + 3);
-    console.log(contentWidth);
     revealingContent.current.parentElement.style.setProperty(
       '--content-width',
       contentWidth + 'px'

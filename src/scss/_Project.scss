@@ -26,25 +26,25 @@
       }
     }
   }
-
 }
 
 .loading-animation {
   animation-name: loading;
   animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-iteration-count: 1;
-  
 }
-@keyframes loading{
+
+@keyframes loading {
   0% {
     opacity: 0;
+    scale: 0.95;
   }
   100% {
     opacity: 1;
+    scale: 1;
   }
 }
-
 
 @media only screen and (min-width: 640px) {
   .project {
@@ -64,7 +64,7 @@
         height: auto;
         align-items: flex-end;
         row-gap: 0.5rem;
-        opacity:1;
+        opacity: 1;
 
         a {
           padding: 0.2rem 0.3rem;

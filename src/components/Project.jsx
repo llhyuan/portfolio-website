@@ -10,17 +10,13 @@ export default function Project({ details }) {
   const [inSight, setInSight] = useState(false);
 
   useEffect(() => {
-    let options = {
-      root: null,
-      rootMargin: '0px 0px 250px 0px',
-    };
-    let observer = new IntersectionObserver((entries) => {
+        let observer = new IntersectionObserver((entries) => {
       let observed = entries[0];
       if (observed.isIntersecting) {
         setInSight(true);
         observer.unobserve(aniRef.current);
       }
-    }, options);
+    });
 
     observer.observe(aniRef.current);
   }, []);
@@ -32,7 +28,7 @@ export default function Project({ details }) {
     >
       <div className='group relative project-img mx-auto'>
         <img
-          className='border-[--text-secondary] border-2'
+          className='border-[--text-secondary] border-2 transition-all delay-100'
           src={imgURL}
           alt='project image'
         />

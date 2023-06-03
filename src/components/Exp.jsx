@@ -9,7 +9,7 @@ export default function Experience({ details }) {
   useEffect(() => {
     let options = {
       root: null,
-      rootMargin: '0px 0px 250px 0px',
+      rootMargin: '0px 0px 100px 0px',
     };
 
     let observer = new IntersectionObserver((entries) => {

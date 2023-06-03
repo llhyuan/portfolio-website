@@ -32,7 +32,7 @@ export default function Main({ formStatus, setFormStatus }) {
 
       if (observedEle.isIntersecting) {
         setNavStatus('nav_' + observedEle.target.id);
-        console.log('nav_' + observedEle.target.id);
+        //console.log('nav_' + observedEle.target.id);
       }
     }, options);
 

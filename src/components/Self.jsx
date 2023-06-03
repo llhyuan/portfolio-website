@@ -97,14 +97,14 @@ function Self({ setFormStatus }) {
       <div className='mt-auto flex lg:flex-col'>
         <div className='relative'>
           <a
-            className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 lg:mt-auto mr-4 hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
+            className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 text-[0.9rem] md:text-[1.2rem] lg:mt-auto mr-4 hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
             href='mailto:lhyuan.liu21@icloud.com'
           >
             Contact Me
           </a>
         </div>
         <a
-          className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
+          className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.7px] w-fit px-3 py-2 my-4 text-[0.9rem] md:text-[1.2rem] hover:translate-x-[3px] hover:translate-y-[1px] hover:cursor-pointer transition-all'
           href='#feedback_header'
           onClick={() => {
             setFormStatus(true);
