@@ -34,6 +34,7 @@ function Navbar() {
           className='group site-title relative bottom-[0.3rem] font-mono'
           onMouseEnter={mouseEnterHandler}
           onAnimationEnd={animationEndHandler}
+          onPointerDown={mouseEnterHandler}
         >
           <span className='text-[2rem] font-mono'>&lt;</span>
           <span className='relative inline-block bottom-[-0.7rem] overflow-hidden w-0 transition-all'>
@@ -44,7 +45,8 @@ function Navbar() {
           <span className='blinking text-transparent bg-[--text-primary]'>
             _
           </span>
-          <span className='text-transparent'>_</span><span className='text-[2rem] font-mono'>/</span>
+          <span className='text-transparent'>_</span>
+          <span className='text-[2rem] font-mono'>/</span>
           <span className='text-[2rem] font-mono'>&gt;</span>
         </div>
         <nav className='links non-mobile'>
