@@ -9,7 +9,6 @@ function Navbar() {
   const [quality, setQuality] = useState(qualities[0]);
 
   function mouseEnterHandler(e) {
-    console.log(e.target);
     e.target.children[1].classList.add('revealing');
   }
 
@@ -20,7 +19,8 @@ function Navbar() {
   }
 
   useEffect(() => {
-    let contentWidth = String(revealingContent.current.offsetWidth + 3);
+    let contentWidth = revealingContent.current.offsetWidth + 3;
+    contentWidth = (contentWidth < 130 ? 130 : contentWidth);
     revealingContent.current.parentElement.style.setProperty(
       '--content-width',
       contentWidth + 'px'

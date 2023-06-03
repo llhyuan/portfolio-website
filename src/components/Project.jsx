@@ -1,10 +1,27 @@
 import { useEffect, useRef, useState } from 'react';
 import '../scss/_Project.scss';
 import Details from './Details';
+import imgPortfolio from '../assets/project-image/portfolio.jpg';
+import imgSpace from '../assets/project-image/space.jpg';
+import imgComponent from '../assets/project-image/component.jpg';
+import imgGift from '../assets/project-image/giftshop.jpg';
 
 export default function Project({ details }) {
-  const imgURL = new URL(details['image'], import.meta.url).href;
+  //const imgURL = new URL(details['image'], import.meta.url).href;
   const summary = 'Tech/Tools';
+
+  function imgSource(id){
+    switch (id) {
+      case 0:
+        return imgPortfolio;
+      case 1:
+        return imgSpace;
+      case 2: 
+        return imgComponent;
+      case 3:
+        return imgGift;
+    }
+  }
 
   const aniRef = useRef(null);
   const [inSight, setInSight] = useState(false);
@@ -29,7 +46,7 @@ export default function Project({ details }) {
       <div className='group relative project-img mx-auto'>
         <img
           className='border-[--text-secondary] border-2 transition-all delay-100'
-          src={imgURL}
+          src={imgSource(details['id'])}
           alt='project image'
         />
         <div className='links transition-all ease-in duration-75 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:transition-all'>
