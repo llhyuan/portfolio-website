@@ -11,6 +11,11 @@ function Navbar() {
   function mouseEnterHandler(e) {
     e.target.children[1].classList.add('revealing');
   }
+  function pointerDownHandler(e){
+    console.log(e);
+
+    e.currentTarget.children[1].classList.add('revealing');
+  }
 
   function animationEndHandler(e) {
     e.target.classList.remove('revealing');
@@ -34,7 +39,7 @@ function Navbar() {
           className='group site-title relative bottom-[0.3rem] font-mono'
           onMouseEnter={mouseEnterHandler}
           onAnimationEnd={animationEndHandler}
-          onPointerDown={mouseEnterHandler}
+          onPointerDown={pointerDownHandler}
         >
           <span className='text-[2rem] font-mono'>&lt;</span>
           <span className='relative inline-block bottom-[-0.7rem] overflow-hidden w-0 transition-all'>
