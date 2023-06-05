@@ -104,7 +104,7 @@ function Self({ setFormStatus }) {
         </div>
         <a
           className='block bg-[--text-primary] text-[--bg-color] underline-offset-[3px] underline decoration-[1.2px] md:decoration-[1.7px] w-fit px-3 py-2 my-4 text-[0.9rem] md:text-[1.2rem] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:cursor-pointer hover:shadow-[5px_5px_var(--bg-color-nav)] transition-all ease-in duration-200'
-          href='#feedback_header'
+          href='#feedback'
           onClick={() => {
             setFormStatus(true);
           }}

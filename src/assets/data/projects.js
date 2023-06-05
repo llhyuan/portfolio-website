@@ -17,7 +17,7 @@ export const projects = [
       'javascript',
       'tailwindcss',
       'reusable react components',
-      'gsap'
+      'gsap', 'svg'
     ],
   },
   {

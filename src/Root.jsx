@@ -1,24 +1,22 @@
-import { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import './_Root.scss';
+import {useState} from 'react';
 import { navContext } from './components/navContext';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import NewNavbar from './components/NewNavbar';
+import LandingAnimation from './components/LandingAnimation';
 
 export default function Root() {
   const [navStatus, setNavStatus] = useState('nav_about');
 
   return (
-    <div className='relative root z-10'>
+    <div className='relative flex flex-col min-h-[100vh] bg-[--bg-color] z-10'>
       <navContext.Provider value={{ navStatus, setNavStatus }}>
-        <div id='fadein' className='translate-x-0'>
+        <div  className='translate-x-0'>
           <Navbar />
           <Home />
         </div>
         <div className='fixed top w-full z-999'>
-          <NewNavbar />
+          <LandingAnimation />
         </div>
       </navContext.Provider>
     </div>
