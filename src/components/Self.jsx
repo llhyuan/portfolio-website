@@ -1,15 +1,14 @@
-import '../scss/_Self.scss';
 
 function Self({ setFormStatus }) {
   return (
-    <div className='self flex flex-col p-8'>
+    <div className='lg:relative lg:top-[1.7rem] flex flex-col p-8 lg:max-w-[600px] lg:h-[85vh]'>
       <div className='name text-[2.8rem] mb-2 md:text-[3rem]'>Hangyuan Liu</div>
       <div className='text-[2rem] font-mono p-2 w-fit text-[--bg-color] bg-[--text-selection] '>Web Developer</div>
-      <div className='info'>
+      <div className='py-4'>
         Hi, I&apos;am frontend developer <br />
         with a curious mind and insatiable desire to learn and evolve.
       </div>
-      <div className='social-media'>
+      <div className='flex justify-between w-[180px] py-4'>
         <div className='git w-8 hover:scale-125 transition-all'>
           <a href='https://github.com/llhyuan' target='_blank' rel='noreferrer'>
             <svg

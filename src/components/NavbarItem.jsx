@@ -12,7 +12,7 @@ export default function NavbarItem({ tag }) {
 
   return (
     <a id={id} href={"#"+tag.toLowerCase()} className='group block mx-[0.7rem]' onClick={clickHandler}>
-      <div className='flex mx-2 pb-[calc(var(--navbar-padding)-0.25rem)] pt-[--navbar-padding]'>
+      <div className='flex mx-2 pb-[calc(1.8rem-0.25rem)] pt-[1.8rem]'>
         <p
           className={
             'pr-[3px] transition-all ease-out duration-100 group-hover:translate-x-[-0.8rem] group-hover:opacity-0' +

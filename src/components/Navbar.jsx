@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import '../scss/_Navbar.scss';
 import { qualities } from '../assets/data/qualities';
 
 import NavbarItem from './NavbarItem';
@@ -33,10 +32,10 @@ function Navbar() {
   }, [quality]);
 
   return (
-    <div className='navbar-container'>
-      <div className='navbar'>
+    <div className='sticky top-0 z-[900] bg-[--bg-color-nav] lg:py-0 lg:px-8'>
+      <div className='navbar relative max-w-[1440px] my-0 mx-auto lg:flex'>
         <div
-          className='group site-title relative bottom-[0.3rem] font-mono'
+          className='group site-title py-[1.2rem] pr-0 pl-8 relative bottom-[0.3rem] font-mono lg:self-center lg:mb-0 lg:mr-auto lg:py-0 lg:px-8 lg:w-[30rem] overflow-x-visible'
           onMouseEnter={mouseEnterHandler}
           onAnimationEnd={animationEndHandler}
           onPointerDown={pointerDownHandler}
@@ -54,7 +53,7 @@ function Navbar() {
           <span className='text-[2rem] font-mono'>/</span>
           <span className='text-[2rem] font-mono'>&gt;</span>
         </div>
-        <nav className='links non-mobile'>
+        <nav className='hidden lg:flex lg:items-center lg:justify-between'>
           <NavbarItem tag={'About'} />
           <NavbarItem tag={'Projects'} />
           <NavbarItem tag={'Experience'} />

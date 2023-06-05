@@ -3,7 +3,7 @@ import { gsap, Back, SteppedEase } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {CustomEase} from 'gsap/CustomEase';
 
-export default function NewNavbar() {
+export default function LandingAnimation() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(CustomEase);
   const containerRef = useRef(null);

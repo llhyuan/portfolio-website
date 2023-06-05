@@ -1,4 +1,3 @@
-import '../scss/_Main.scss';
 import { skills } from '../assets/data/skills';
 import { about } from '../assets/data/about';
 
@@ -41,19 +40,25 @@ export default function Main({ formStatus, setFormStatus }) {
 
   return (
     <article className='main'>
-      <section ref={aboutRef} className='about' id='about'>
-        <header>ABOUT</header>
+      <section
+        ref={aboutRef}
+        className='about pb-20 md:pb-[2.5rem] lg:pt-[4.7rem]'
+        id='about'
+      >
+        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-700 lg:hidden'>
+          ABOUT
+        </header>
         <div className='mx-8'>
           {about['about'].map((paragraph, index) => (
-            <p key={index} className='text-[--text-secondary]'>
+            <p key={index} className='text-[--text-secondary] pb-4'>
               {paragraph}
             </p>
           ))}
         </div>
         <div className='px-8'>
           <div className='my-2'>
-            <p className='text-xl'>Technical Skills:</p>
-            <div className='flex flex-wrap gap-y-4'>
+            <p className='text-xl pb-4'>Technical Skills:</p>
+            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
               {skills.technical.map((item, index) => (
                 <span
                   key={index}
@@ -65,8 +70,8 @@ export default function Main({ formStatus, setFormStatus }) {
             </div>
           </div>
           <div className='my-2'>
-            <p className='text-xl'>Tools:</p>
-            <div className='flex flex-wrap gap-y-4'>
+            <p className='text-xl pb-4'>Tools:</p>
+            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
               {skills.tools.map((item, index) => (
                 <span
                   key={index}
@@ -78,8 +83,8 @@ export default function Main({ formStatus, setFormStatus }) {
             </div>
           </div>
           <div className='my-2'>
-            <p className='text-xl'>Soft Skills:</p>
-            <div className='flex flex-wrap gap-y-4'>
+            <p className='text-xl pb-4'>Soft Skills:</p>
+            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
               {skills.soft.map((item, index) => (
                 <span
                   key={index}
@@ -91,7 +96,7 @@ export default function Main({ formStatus, setFormStatus }) {
             </div>
           </div>
           <div className='my-2'>
-            <p className='text-xl'>Exploring into Bakcend:</p>
+            <p className='text-xl pb-4'>Exploring into Bakcend:</p>
             <div className='flex flex-wrap gap-y-4'>
               {skills.backend.map((item, index) => (
                 <span
@@ -105,19 +110,35 @@ export default function Main({ formStatus, setFormStatus }) {
           </div>
         </div>
       </section>
-      <section ref={prjRef} className='projects' id='projects'>
-        <header>PROJECTS</header>
+      <section
+        ref={prjRef}
+        className='projects pb-20 md:pb-[2.5rem]'
+        id='projects'
+      >
+        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden'>
+          PROJECTS
+        </header>
         {projects.map((project, index) => (
           <Project key={index} details={project} />
         ))}
       </section>
-      <section ref={expRef} className='exp-section' id='experience'>
-        <header>EXPERIENCE</header>
+      <section
+        ref={expRef}
+        className='exp-section pb-20 md:pb-[2.5rem]'
+        id='experience'
+      >
+        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden'>
+          EXPERIENCE
+        </header>
         {experience.map((exp, index) => (
           <Experience key={index} details={exp} />
         ))}
       </section>
       <section id='feedback'>
+    { formStatus ? <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] sm:text-center sm:w-full lg:text-left lg:top-0'>
+      Leave A Message
+      </header> : ""}
+
         {formStatus ? <Form setFormStatus={setFormStatus} /> : ''}
       </section>
 
@@ -127,4 +148,3 @@ export default function Main({ formStatus, setFormStatus }) {
     </article>
   );
 }
-

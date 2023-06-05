@@ -51,15 +51,12 @@ export default function Form({ setFormStatus }) {
   return (
     <section
       ref={formRef}
-      className='relative max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px] '
+      className='relative pb-20 md:pb-[2.5rem]'
     >
-      <header id='feedback_header' className='sm:text-center lg:text-left'>
-        Leave A Message
-      </header>
-      <form
+            <form
         action='mailto:lhyuan.liu21@icloud.com'
         method='GET'
-        className='flex flex-col px-8 '
+        className='flex flex-col px-8 max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'
       >
         <div className='flex flex-col my-6'>
           <label htmlFor='name' className='mb-2 text-[--text-secondary]'>
