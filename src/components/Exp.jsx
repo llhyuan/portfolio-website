@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import '../scss/_Exp.scss';
 import Details from './Details';
 export default function Experience({ details }) {
   const summary = 'Transferable Skills';

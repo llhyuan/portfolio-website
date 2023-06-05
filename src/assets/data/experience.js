@@ -20,6 +20,7 @@ export const experience = [
       'Have worked with clients and agencies around the globe, including United Nations, WHO (World Health Organization), UNHRC (United Nations Human Rights Council), TWB (Translators without Borders).',
     ],
     'Transferable Skills': [
+      'Solid Research Skill',
       'Good communication',
       'Customer oriented mindset',
       'Fast learning',

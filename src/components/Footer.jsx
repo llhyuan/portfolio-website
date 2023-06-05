@@ -1,8 +1,7 @@
-import '../scss/_Footer.scss';
 
 function Footer() {
   return (
-    <div className='bg-[--bg-color-nav] py-4 lg:bg-[--bg-color] lg:pt-0'>
+    <div className='bg-[--bg-color-nav] py-4 lg:bg-[--bg-color] lg:pt-0 lg:pb-12'>
           <p className='text-[1rem] text-[--text-secondary] px-8 pb-1'>
             About this site:
           </p>

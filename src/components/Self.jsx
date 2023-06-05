@@ -5,7 +5,7 @@ function Self({ setFormStatus }) {
       <div className='name text-[2.8rem] mb-2 md:text-[3rem]'>Hangyuan Liu</div>
       <div className='text-[2rem] font-mono p-2 w-fit text-[--bg-color] bg-[--text-selection] '>Web Developer</div>
       <div className='py-4'>
-        Hi, I&apos;am frontend developer <br />
+        Hi, I&apos;m a frontend developer <br />
         with a curious mind and insatiable desire to learn and evolve.
       </div>
       <div className='flex justify-between w-[180px] py-4'>

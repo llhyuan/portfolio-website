@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --bg-color: #3c3836;
   --bg-color-nav: #665c54;
-  --bg-color-active: #C0C433;
-  --bg-color-disabled: #ED503D;
+  --bg-color-active: #c0c433;
+  --bg-color-disabled: #ed503d;
   --bg-color-foot: #665c54;
   --bg-color-icon: #fbf1c7;
-    --text-primary: #fbf1c7;
-  --text-secondary: #D1C1A3;
-  --text-selection: #4EA6AC;
-  --text-highlight: #C0C433;
-  --text-highlight1: #ECB22C;
+  --text-primary: #fbf1c7;
+  --text-secondary: #d1c1a3;
+  --text-selection: #4ea6ac;
+  --text-highlight: #c0c433;
+  --text-highlight1: #ecb22c;
   --text-highlight2: #8ec07c;
   --border-color: #ebdbb2;
   --margin-bottom: 0.8rem;
@@ -23,14 +22,12 @@
   --outline-invalid: #ed503d;
 }
 
-
 * {
   box-sizing: border-box;
   color: var(--text-primary);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.025rem;
-
 }
 
 html {
@@ -46,7 +43,6 @@ body {
   color: var(--bg-color);
   background-color: var(--text-selection);
 }
-
 
 .blinking {
   position: relative;
@@ -77,11 +73,10 @@ body {
   0% {
     width: 0;
   }
-  15%{
+  15% {
     width: var(--content-width);
   }
   90% {
-
     width: var(--content-width);
   }
   100% {
@@ -107,4 +102,29 @@ body {
   }
 }
 
+.hero-close {
+  transform: rotate(0);
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-duration: 100ms;
+}
 
+.content-close {
+  max-height: 0;
+  padding-bottom: 0;
+}
+
+.loading-animation {
+  animation-name: loading;
+  animation-timing-function: ease-in;
+  animation-duration: 1.7s;
+  animation-iteration-count: 1;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

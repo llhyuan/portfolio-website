@@ -1,11 +1,12 @@
-import '../scss/_Details.scss';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Details({ details, summary }) {
   const [dropdownStatus, setDropdownStatus] = useState(true);
   const dropdownRef = useRef();
+  console.log(dropdownStatus);
 
   function clickHandler() {
+    console.log('clicked');
     setDropdownStatus(!dropdownStatus);
   }
 
@@ -15,10 +16,7 @@ export default function Details({ details, summary }) {
   }, []);
 
   return (
-    <div
-      className='group mt-4 dropdown hover:cursor-pointer'
-      onClick={clickHandler}
-    >
+    <div className='group mt-4 hover:cursor-pointer' onClick={clickHandler}>
       <p className='mb-2 text-[1rem]'>
         <svg
           className={
