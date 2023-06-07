@@ -1,10 +1,10 @@
-# Portfolio Website
+# Portfolio Template
 
-The design of this portfolio website is slightly inspired by Neovim and Gruvbox Material. 
+The design of this portfolio website is inspired by Neovim and Gruvbox Material. The website is built with custom, reusable react components. The data and structure are completely separated. It's easy to swap in all your highlights and achievements. With tailwind css, any adjustments or changes you make to an element or component stays local. 
 
 ### Links
 
-- Live Site URL: [Github page](https://llhyuan.github.io/Space-tourism-website/)
+- Live Site URL: [Github page](https://github.com/llhyuan/portfolio-website)
 
 ### Built with
 

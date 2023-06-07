@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 
-import Root from './Root.jsx';
+import Root from './components/Root';
 import './index.css';
 import { StrictMode } from 'react';
 

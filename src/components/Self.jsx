@@ -10,7 +10,7 @@ function Self({ setFormStatus }) {
       </div>
       <div className='flex justify-between w-[180px] py-4'>
         <div className='git w-8 hover:scale-125 transition-all'>
-          <a href='https://github.com/llhyuan' target='_blank' rel='noreferrer'>
+          <a href='https://github.com/llhyuan' target='_blank' rel='noreferrer' aria-label="Link to Github Repository">
             <svg
               className='fill-[--bg-color-icon]'
               viewBox='0 0 496 484'
@@ -26,6 +26,7 @@ function Self({ setFormStatus }) {
             href='https://www.linkedin.com/in/hangyuan-liu-a9282718b/'
             target='_blank'
             rel='noreferrer'
+    aria-label="Link to LinkedIn Profile"
           >
             <svg
               viewBox='0 0 448 512'
@@ -41,7 +42,7 @@ function Self({ setFormStatus }) {
           </a>
         </div>
         <div className='relative bottom-[3px] resume w-7 hover:scale-125 transition-all'>
-          <a href='#' target='_blank' rel='noreferrer'>
+          <a href='#' target='_blank' rel='noreferrer' aria-label="Link to preview and download resume">
             <svg
               viewBox='0 0 622 800'
               fill='none'

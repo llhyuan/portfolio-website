@@ -19,7 +19,7 @@ function Navbar() {
   function animationEndHandler(e) {
     e.target.classList.remove('revealing');
     let randomIndex = Math.random();
-    setQuality(qualities[Math.floor(randomIndex * qualities.length)]);
+    setQuality(qualities[Math.round(randomIndex * qualities.length)]);
   }
 
   useEffect(() => {

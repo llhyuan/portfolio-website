@@ -1,9 +1,9 @@
 import {useState} from 'react';
-import { navContext } from './components/navContext';
+import { navContext } from './navContext';
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import LandingAnimation from './components/LandingAnimation';
+import Navbar from './Navbar';
+import Home from './Home';
+import LandingAnimation from './LandingAnimation';
 
 export default function Root() {
   const [navStatus, setNavStatus] = useState('nav_about');

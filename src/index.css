@@ -44,6 +44,7 @@ body {
   background-color: var(--text-selection);
 }
 
+/*-- Navbar cursor blinking animation --*/
 .blinking {
   position: relative;
   bottom: 6px;
@@ -63,6 +64,8 @@ body {
   }
 }
 
+
+/*-- Navbar content revealing animation --*/
 .revealing {
   animation-name: reveal;
   animation-duration: 1.5s;
@@ -84,6 +87,8 @@ body {
   }
 }
 
+
+/*-- Loading page animation --*/
 .loading-animation {
   animation-name: loading;
   animation-timing-function: ease-in;
@@ -102,6 +107,8 @@ body {
   }
 }
 
+
+/*-- Animation for the custom detail component --*/
 .hero-close {
   transform: rotate(0);
   transition-property: all;
@@ -114,17 +121,4 @@ body {
   padding-bottom: 0;
 }
 
-.loading-animation {
-  animation-name: loading;
-  animation-timing-function: ease-in;
-  animation-duration: 1.7s;
-  animation-iteration-count: 1;
-}
-@keyframes loading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
