@@ -4,7 +4,7 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
 
 ### Links
 
-- Live Site URL: [Github page](https://github.com/llhyuan/portfolio-website)
+- Live Site URL: [Github page](https://llhyuan.github.io/portfolio-website/)
 
 ### Built with
 
