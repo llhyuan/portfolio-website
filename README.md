@@ -33,13 +33,12 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
 
 ### Screenshots
 
-<img src="./public/images/desktop-1.png" width="100">
-![mobile-view1](./public/images/mobile-1.png | width=100)
-![mobile-view2](./public/images/mobile-2.png | width=200)
-![mobile-view2](./public/images/mobile-3.png | width=300)
-![desktop-view1](./public/images/desktop-1.png | width=100)
-![desktop-view2](./public/images/desktop-2.png | width=200)
-![desktop-view3](./public/images/desktop-3.png | width=300)
+<img src="./public/images/mobile-1.png" width="250">
+<img src="./public/images/mobile-2.png" width="250">
+<img src="./public/images/mobile-3.png" width="250">
+<img src="./public/images/desktop-1.png" width="350">
+<img src="./public/images/desktop-2.png" width="350">
+<img src="./public/images/desktop-3.png" width="350">
 
 ### Built with
 
