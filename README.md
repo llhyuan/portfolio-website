@@ -33,6 +33,7 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
 
 ### Screenshots
 
+<img src="./public/images/desktop-1.png" width="100">
 ![mobile-view1](./public/images/mobile-1.png | width=100)
 ![mobile-view2](./public/images/mobile-2.png | width=200)
 ![mobile-view2](./public/images/mobile-3.png | width=300)
