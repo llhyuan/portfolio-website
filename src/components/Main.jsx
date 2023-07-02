@@ -23,7 +23,7 @@ export default function Main({ formStatus, setFormStatus }) {
     let options = {
       root: null,
       rootMargin: '120px 0px 120px 0px',
-      threshold: 0.4,
+      threshold: 0.3,
     };
 
     let observer = new IntersectionObserver((entries) => {

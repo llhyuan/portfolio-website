@@ -4,6 +4,8 @@ import imgPortfolio from '../assets/project-image/portfolio.jpg';
 import imgSpace from '../assets/project-image/space.jpg';
 import imgComponent from '../assets/project-image/component.jpg';
 import imgGift from '../assets/project-image/giftshop.jpg';
+import imgMarkdown from '../assets/project-image/markdown.jpg';
+import imgTimer from '../assets/project-image/timer.jpg';
 
 export default function Project({ details }) {
   //const imgURL = new URL(details['image'], import.meta.url).href;
@@ -13,11 +15,15 @@ export default function Project({ details }) {
     switch (id) {
       case 0:
         return imgPortfolio;
-      case 1:
-        return imgSpace;
-      case 2:
-        return imgComponent;
+      case 1: 
+        return imgMarkdown;
+      case 2: 
+        return imgTimer;
       case 3:
+        return imgSpace;
+      case 4:
+        return imgComponent;
+      case 5:
         return imgGift;
     }
   }
