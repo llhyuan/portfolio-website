@@ -69,7 +69,7 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
     How to: simply replace the value
   - key: ['value', ...]
     ![example2](./public/images/example1.png)
-    How to: add to/delete from the array
+    How to: add to/delete from the array.
     If you don't want this section, just leave the array empty
 
 ### Deploy

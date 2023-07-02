@@ -1,5 +1,6 @@
 import { useState, useContext, useRef, useEffect } from 'react';
 import { navContext } from '../components/navContext';
+import emailjs from '@emailjs/browser';
 
 export default function Form({ setFormStatus }) {
   const { setNavStatus } = useContext(navContext);
@@ -48,13 +49,11 @@ export default function Form({ setFormStatus }) {
     observer.observe(observed);
   }, [setNavStatus]);
 
+  useEffect(() => {});
   return (
-    <section
-      ref={formRef}
-      className='relative pb-20 md:pb-[2.5rem]'
-    >
-            <form
-        action='mailto:lhyuan.liu21@icloud.com'
+    <section ref={formRef} className='relative pb-20 md:pb-[2.5rem]'>
+      <form
+        action='#'
         method='GET'
         className='flex flex-col px-8 max-w-[600px] mx-auto lg:mx-0 lg:max-w-[900px]'
       >
@@ -164,6 +163,27 @@ Or Any interesting development in Web Dev that you think I should check out.`}
           disabled={!showSubmitBtn ? true : false}
           onClick={(e) => {
             e.preventDefault();
+            let formData = new FormData(e.target.parentElement);
+            let templateParam = {
+              name: formData.get('name'),
+              email: formData.get('email'),
+              feedback: formData.get('feedback')
+            }
+            emailjs
+              .send(
+                'service_x8z98ne',
+                'contact_form',
+                templateParam,
+                'HRizqHe9zvAzDNjcV'
+              )
+              .then(
+                () => {
+                  console.log('SUCESS!');
+                },
+                () => {
+                  console.log('FAILED');
+                }
+              );
             setPromptStatus(!promptStatus);
             setSubmitBtnStatus({
               name: false,

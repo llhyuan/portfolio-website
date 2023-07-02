@@ -3,10 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 export default function Details({ details, summary }) {
   const [dropdownStatus, setDropdownStatus] = useState(true);
   const dropdownRef = useRef();
-  console.log(dropdownStatus);
 
   function clickHandler() {
-    console.log('clicked');
     setDropdownStatus(!dropdownStatus);
   }
 
