@@ -3,7 +3,7 @@ export const experience = [
     id: 0,
     period: '2021.12 - 2022.04',
     title: 'Frontend Web Development Course',
-    responsibility: 'Online - freeCodeCamp',
+    responsibility: 'freeCodeCamp',
     description: [
       'Develop responsive web apps and reusable components using React, scss, tailwindcss, as well as vanilla JavaScript and CSS.',
       'Reflect and improve based on the feedback from the course and online dev community.',
@@ -17,7 +17,7 @@ export const experience = [
     responsibility: 'Freelance & Volunteering',
     description: [
       'Specialize in legal and IT related areas',
-      'Have worked with clients and agencies around the globe, including United Nations, WHO (World Health Organization), UNHRC (United Nations Human Rights Council), TWB (Translators without Borders).',
+      'Served and helped clients and agencies around the globe, including United Nations, WHO (World Health Organization), UNHRC (United Nations Human Rights Council), TWB (Translators without Borders).',
     ],
     'Transferable Skills': [
       'Solid Research Skill',
@@ -29,7 +29,7 @@ export const experience = [
   },
   {
     id: 2,
-    period: '2021.09 - Present',
+    period: '2016.10 - 2021.09',
     title: 'Liaison Officer',
     responsibility: 'Full-time',
     description: [

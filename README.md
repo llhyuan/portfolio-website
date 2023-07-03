@@ -6,6 +6,8 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
 
 - Dark mode and more color themes
 
+## Table of Content 
+
 - [About](#about)
   - [Features](#features)
   - [Links](#links)
@@ -71,7 +73,10 @@ The design of this portfolio website is inspired by Neovim and Gruvbox Material.
     ![example2](./public/images/example1.png)
     How to: add to/delete from the array.
     If you don't want this section, just leave the array empty
-
+- Receiving submitted feedback form without using backend code
+  - This is made possible with emailjs
+    - The code is located in the Form component 
+    - Check out their [documentation](https://www.npmjs.com/package/@emailjs/browser?activeTab=readme) for a step-by-step guide
 ### Deploy
 
 - Run `pnpm run deploy` to deploy it to GitHub Page.

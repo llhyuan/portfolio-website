@@ -129,10 +129,7 @@ export default function Form({ setFormStatus }) {
             rows='5'
             id='feedback'
             name='feedback'
-            placeholder={`What do you think about my portfolio? 
-What are the things you like about this website or my portfolio in general?
-What are the areas that still need to be improved?
-Or Any interesting development in Web Dev that you think I should check out.`}
+            placeholder={`Please leave a message at the silenced beep...`}
             value={formData.feedback}
             maxLength='500'
             className='bg-[--bg-color-nav] p-2 outline-none focus:outline-[--text-secondary] placeholder-[--text-secondary]'
@@ -178,10 +175,10 @@ Or Any interesting development in Web Dev that you think I should check out.`}
               )
               .then(
                 () => {
-                  console.log('SUCESS!');
+                  //console.log('SUCESS!');
                 },
                 () => {
-                  console.log('FAILED');
+                  //console.log('FAILED');
                 }
               );
             setPromptStatus(!promptStatus);

@@ -57,7 +57,7 @@ export default function Main({ formStatus, setFormStatus }) {
         </div>
         <div className='px-8'>
           <div className='my-2'>
-            <p className='text-xl pb-4'>Technical Skills:</p>
+            <p className='text-xl pb-4'>Tech Stack:</p>
             <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
               {skills.technical.map((item, index) => (
                 <span
@@ -69,6 +69,20 @@ export default function Main({ formStatus, setFormStatus }) {
               ))}
             </div>
           </div>
+          <div className='my-2'>
+            <p className='text-xl pb-4'>Exploring into Bakcend:</p>
+            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
+              {skills.backend.map((item, index) => (
+                <span
+                  key={index}
+                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]'
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <div className='my-2'>
             <p className='text-xl pb-4'>Tools:</p>
             <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
@@ -84,24 +98,11 @@ export default function Main({ formStatus, setFormStatus }) {
           </div>
           <div className='my-2'>
             <p className='text-xl pb-4'>Soft Skills:</p>
-            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
+            <div className='flex flex-wrap gap-y-4 '>
               {skills.soft.map((item, index) => (
                 <span
                   key={index}
                   className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight2]'
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className='my-2'>
-            <p className='text-xl pb-4'>Exploring into Bakcend:</p>
-            <div className='flex flex-wrap gap-y-4'>
-              {skills.backend.map((item, index) => (
-                <span
-                  key={index}
-                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]'
                 >
                   {item}
                 </span>
@@ -135,9 +136,13 @@ export default function Main({ formStatus, setFormStatus }) {
         ))}
       </section>
       <section id='feedback'>
-    { formStatus ? <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] sm:text-center sm:w-full lg:text-left lg:top-0'>
-      Leave A Message
-      </header> : ""}
+        {formStatus ? (
+          <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] sm:text-center sm:w-full lg:text-left lg:top-0'>
+            Leave A Message
+          </header>
+        ) : (
+          ''
+        )}
 
         {formStatus ? <Form setFormStatus={setFormStatus} /> : ''}
       </section>
