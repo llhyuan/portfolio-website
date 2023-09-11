@@ -62,7 +62,7 @@ function Self({ setFormStatus }) {
         </div>
         <div className='relative bottom-[3px] resume w-7 hover:scale-125 transition-all'>
           <a
-            href='https://drive.google.com/file/d/1HcPQgPavZ2wvMO2uFLpR6adJDJOyjZJu/view?usp=sharing'
+            href='https://drive.google.com/file/d/1Ajvt_A3dt-_hzUBiY7VnH6VbG_GYL5H6/view?usp=share_link'
             target='_blank'
             rel='noreferrer'
             aria-label='Link to preview and download resume'

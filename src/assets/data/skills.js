@@ -2,14 +2,15 @@ export const skills = {
   technical: [
     "HTML",
     "CSS/SCSS",
-    "Tailwindcss",
+    "Tailwind css",
     "JavaScript",
     "TypeScript",
     "React",
-    "React Router",
     "Redux",
     "Node.js",
+    "Express",
     "Next.js",
+    "MongoDB",
   ],
   tools: [
     "pnpm",
@@ -22,5 +23,5 @@ export const skills = {
     "Figma",
   ],
   soft: ["Eager to learn", "Curious", "Communicative", "Cooperative"],
-  backend: ["PostgreSQL", "MongoDB", "Go", "Rust", "More to be added ..."],
+  more: ["Test Automation", "SEO", "PostgreSQL", "Go", "More to be added ..."],
 };

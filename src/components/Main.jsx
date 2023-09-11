@@ -1,15 +1,15 @@
-import { skills } from '../assets/data/skills';
-import { about } from '../assets/data/about';
+import { skills } from "../assets/data/skills";
+import { about } from "../assets/data/about";
 
-import { useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef, useContext } from "react";
 
-import { navContext } from '../components/navContext';
-import { projects } from '../assets/data/projects';
-import { experience } from '../assets/data/experience';
-import Experience from './Exp';
-import Project from './Project';
-import Form from './Form';
-import Footer from './Footer';
+import { navContext } from "../components/navContext";
+import { projects } from "../assets/data/projects";
+import { experience } from "../assets/data/experience";
+import Experience from "./Exp";
+import Project from "./Project";
+import Form from "./Form";
+import Footer from "./Footer";
 
 export default function Main({ formStatus, setFormStatus }) {
   const { setNavStatus } = useContext(navContext);
@@ -22,7 +22,7 @@ export default function Main({ formStatus, setFormStatus }) {
     let observed = [aboutRef.current, prjRef.current, expRef.current];
     let options = {
       root: null,
-      rootMargin: '120px 0px 120px 0px',
+      rootMargin: "120px 0px 120px 0px",
       threshold: 0.3,
     };
 
@@ -30,7 +30,7 @@ export default function Main({ formStatus, setFormStatus }) {
       let observedEle = entries[0];
 
       if (observedEle.isIntersecting) {
-        setNavStatus('nav_' + observedEle.target.id);
+        setNavStatus("nav_" + observedEle.target.id);
         //console.log('nav_' + observedEle.target.id);
       }
     }, options);
@@ -39,43 +39,43 @@ export default function Main({ formStatus, setFormStatus }) {
   }, [setNavStatus]);
 
   return (
-    <article className='main'>
+    <article className="main">
       <section
         ref={aboutRef}
-        className='about pb-20 md:pb-[2.5rem] lg:pt-[4.7rem]'
-        id='about'
+        className="about pb-20 md:pb-[2.5rem] lg:pt-[4.7rem]"
+        id="about"
       >
-        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-700 lg:hidden'>
+        <header className="sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-700 lg:hidden">
           ABOUT
         </header>
-        <div className='mx-8'>
-          {about['about'].map((paragraph, index) => (
-            <p key={index} className='text-[--text-secondary] pb-4'>
+        <div className="mx-8">
+          {about["about"].map((paragraph, index) => (
+            <p key={index} className="text-[--text-secondary] pb-4">
               {paragraph}
             </p>
           ))}
         </div>
-        <div className='px-8'>
-          <div className='my-2'>
-            <p className='text-xl pb-4'>Tech Stack:</p>
-            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
+        <div className="px-8">
+          <div className="my-2">
+            <p className="text-xl pb-4">Tech Stack:</p>
+            <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
               {skills.technical.map((item, index) => (
                 <span
                   key={index}
-                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight]'
+                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight]"
                 >
                   {item}
                 </span>
               ))}
             </div>
           </div>
-          <div className='my-2'>
-            <p className='text-xl pb-4'>Exploring into Bakcend:</p>
-            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
-              {skills.backend.map((item, index) => (
+          <div className="my-2">
+            <p className="text-xl pb-4">Next to come:</p>
+            <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
+              {skills.more.map((item, index) => (
                 <span
                   key={index}
-                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]'
+                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]"
                 >
                   {item}
                 </span>
@@ -83,26 +83,26 @@ export default function Main({ formStatus, setFormStatus }) {
             </div>
           </div>
 
-          <div className='my-2'>
-            <p className='text-xl pb-4'>Tools:</p>
-            <div className='flex flex-wrap gap-y-4 pb-[1.2rem]'>
+          <div className="my-2">
+            <p className="text-xl pb-4">Tools:</p>
+            <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
               {skills.tools.map((item, index) => (
                 <span
                   key={index}
-                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight1]'
+                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight1]"
                 >
                   {item}
                 </span>
               ))}
             </div>
           </div>
-          <div className='my-2'>
-            <p className='text-xl pb-4'>Soft Skills:</p>
-            <div className='flex flex-wrap gap-y-4 '>
+          <div className="my-2">
+            <p className="text-xl pb-4">Soft Skills:</p>
+            <div className="flex flex-wrap gap-y-4 ">
               {skills.soft.map((item, index) => (
                 <span
                   key={index}
-                  className='block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight2]'
+                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight2]"
                 >
                   {item}
                 </span>
@@ -113,10 +113,10 @@ export default function Main({ formStatus, setFormStatus }) {
       </section>
       <section
         ref={prjRef}
-        className='projects pb-20 md:pb-[2.5rem]'
-        id='projects'
+        className="projects pb-20 md:pb-[2.5rem]"
+        id="projects"
       >
-        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden'>
+        <header className="sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden">
           PROJECTS
         </header>
         {projects.map((project, index) => (
@@ -125,29 +125,29 @@ export default function Main({ formStatus, setFormStatus }) {
       </section>
       <section
         ref={expRef}
-        className='exp-section pb-20 md:pb-[2.5rem]'
-        id='experience'
+        className="exp-section pb-20 md:pb-[2.5rem]"
+        id="experience"
       >
-        <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden'>
+        <header className="sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] lg:hidden">
           EXPERIENCE
         </header>
         {experience.map((exp, index) => (
           <Experience key={index} details={exp} />
         ))}
       </section>
-      <section id='feedback'>
+      <section id="feedback">
         {formStatus ? (
-          <header className='sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] sm:text-center sm:w-full lg:text-left lg:top-0'>
+          <header className="sticky top-24 text-[1.5rem] px-8 py-4 bg-transparent backdrop-blur-md z-[700] sm:text-center sm:w-full lg:text-left lg:top-0">
             Leave A Message
           </header>
         ) : (
-          ''
+          ""
         )}
 
-        {formStatus ? <Form setFormStatus={setFormStatus} /> : ''}
+        {formStatus ? <Form setFormStatus={setFormStatus} /> : ""}
       </section>
 
-      <section id='footer'>
+      <section id="footer">
         <Footer />
       </section>
     </article>
