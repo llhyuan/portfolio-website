@@ -56,13 +56,13 @@ export default function Project({ details }) {
         />
         <div className="absolute top-0 m-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] flex flex-col items-center gap-y-6 backdrop-blur-md visible transition-all ease-in duration-75 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:transition-all sm:mt-[0.5rem] sm:static sm:visible sm:h-auto sm:items-end sm:gap-y-2 sm:opacity-100">
           <a
-            className="mt-auto px-[0.8rem] py-2 bg-[--text-selection] text-[--bg-color] underline underline-offset-4 transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all sm:px-[0.3rem] sm:py-[0.2rem] sm:text-[0.8rem]"
+            className="mt-auto block px-[0.8rem] py-2 bg-[--text-selection] text-[--bg-color] underline underline-offset-4 transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all sm:px-[0.3rem] sm:py-[0.3rem] sm:text-[0.8rem]"
             href={details["github"]}
           >
             GitHub Repo
           </a>
           <a
-            className="mb-auto px-[0.8rem] py-2 bg-[--text-selection] text-[--bg-color] underline underline-offset-4 transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all sm:px-[0.3rem] sm:py-[0.2rem] sm:text-[0.8rem]"
+            className="mb-auto px-[0.8rem] py-2 bg-[--text-selection] text-[--bg-color] underline underline-offset-4 transition-all ease-out duration-75 hover:shadow-[4px_4px_rgb(50,106,110)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transition-all sm:px-[0.3rem] sm:py-[0.3rem] sm:text-[0.8rem]"
             href={details["livesite"]}
           >
             Live Site

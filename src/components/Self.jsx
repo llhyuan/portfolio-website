@@ -78,7 +78,7 @@ function Self({ setFormStatus }) {
             <span className="font-mono text-[2.2rem] group-hover:text-[--text-selection] transition-all duration-120 ease-in-out">
               C
             </span>
-            <span className="relative top-[8px] right-[10px] font-mono text-[2rem] group-hover:text-[--text-selection] transition-all duration-120 ease-in-out">
+            <span className="relative top-[4px] right-[11.5px] font-mono text-[2rem] group-hover:text-[--text-selection] transition-all duration-120 ease-in-out">
               V
             </span>
           </a>

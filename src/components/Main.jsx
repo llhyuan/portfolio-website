@@ -70,20 +70,6 @@ export default function Main({ formStatus, setFormStatus }) {
             </div>
           </div>
           <div className="my-2">
-            <p className="text-xl pb-4">Next to come:</p>
-            <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
-              {skills.more.map((item, index) => (
-                <span
-                  key={index}
-                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="my-2">
             <p className="text-xl pb-4">Tools:</p>
             <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
               {skills.tools.map((item, index) => (
@@ -98,11 +84,24 @@ export default function Main({ formStatus, setFormStatus }) {
           </div>
           <div className="my-2">
             <p className="text-xl pb-4">Soft Skills:</p>
-            <div className="flex flex-wrap gap-y-4 ">
+            <div className="flex flex-wrap gap-y-4 pb-[1.2rem]">
               {skills.soft.map((item, index) => (
                 <span
                   key={index}
                   className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-highlight2]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="my-2">
+            <p className="text-xl pb-4">What I&apos;m learning:</p>
+            <div className="flex flex-wrap gap-y-4 ">
+              {skills.more.map((item, index) => (
+                <span
+                  key={index}
+                  className="block text-[--bg-color] font-bold px-3 py-[0.3rem] border-x-[0.3rem] border-x-[--bg-color] bg-[--text-secondary]"
                 >
                   {item}
                 </span>

@@ -23,5 +23,5 @@ export const skills = {
     "Figma",
   ],
   soft: ["Eager to learn", "Curious", "Communicative", "Cooperative"],
-  more: ["Test Automation", "SEO", "PostgreSQL", "Go", "More to be added ..."],
+  more: ["AWS Cloud Practitioner Certificate", "and more ..."],
 };
