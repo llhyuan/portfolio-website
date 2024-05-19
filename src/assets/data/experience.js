@@ -1,6 +1,19 @@
 export const experience = [
   {
     id: 0,
+    period: "2024.2 - Present",
+    title: "Full-stack Web Developer",
+    responsibility: "Kvalifik",
+    description: [
+      "Build responsive frontend with React, Next.js and Tailwind. Leveraging SSR with react server component and next.js",
+      "Maintain and write RESTful API endpoints with TypeScript, Nest.js and Next.js",
+      "Maintain and adjust CI/CD(Github Workflow)",
+      "Engage in agile development practices and participate in sprint planning and task refinement",
+    ],
+    "Transferable Skills": [],
+  },
+  {
+    id: 1,
     period: "2021.12 - Present",
     title: "Full-stack Web Development Course",
     responsibility: "freeCodeCamp & Udemy",
@@ -11,7 +24,7 @@ export const experience = [
     "Transferable Skills": [],
   },
   {
-    id: 1,
+    id: 2,
     period: "2021.09 - Present",
     title: "English - Chinese Interpreter and Translator",
     responsibility: "Freelance & Volunteering",
@@ -28,7 +41,7 @@ export const experience = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     period: "2016.10 - 2021.09",
     title: "Liaison Officer",
     responsibility: "Full-time",

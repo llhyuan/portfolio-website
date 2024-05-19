@@ -69,7 +69,7 @@ function Self({ setFormStatus }) {
         </div>
         <div className="relative bottom-[3px] resume w-7">
           <a
-            href="https://drive.google.com/file/d/1Ajvt_A3dt-_hzUBiY7VnH6VbG_GYL5H6/view?usp=share_link"
+            href="https://drive.google.com/file/d/1tVKdN4h551cjUToTTvBSYXrIUwPGHEct/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             aria-label="Link to preview and download resume"

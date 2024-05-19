@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import Details from './Details';
+import { useEffect, useRef, useState } from "react";
+import Details from "./Details";
 export default function Experience({ details }) {
-  const summary = 'Transferable Skills';
+  const summary = "Transferable Skills";
   const [isInsight, setInSight] = useState(false);
   const aniRef = useRef(null);
 
   useEffect(() => {
     let options = {
       root: null,
-      rootMargin: '0px 0px 100px 0px',
+      rootMargin: "0px 0px 100px 0px",
     };
 
     let observer = new IntersectionObserver((entries) => {
@@ -26,23 +26,23 @@ export default function Experience({ details }) {
     <div
       ref={aniRef}
       className={
-        'group exp p-8 hover:transition-all sm:flex sm:justify-between ' +
-        (isInsight ? 'loading-animation' : '')
+        "group exp p-8 hover:transition-all sm:flex sm:justify-between " +
+        (isInsight ? "loading-animation" : "")
       }
     >
-      <div className='mb-4 sm:max-w-[30%]'>
-        <p className='text-[1rem] pb-[0.8rem]'>{details['period']}</p>
-        <p className='text-[1.3rem]'>{details['title']}</p>
-        <p className='text-[--text-secondary]'>{details['responsibility']}</p>
+      <div className="mb-4 sm:max-w-[30%]">
+        <p className="text-[1rem] pb-[0.8rem]">{details["period"]}</p>
+        <p className="text-[1.3rem]">{details["title"]}</p>
+        <p className="text-[--text-secondary]">{details["responsibility"]}</p>
       </div>
-      <div className='sm:max-w-[65%] text-[--text-secondary]'>
-        <ul className='my-2'>
-          {details['description'].map((item, index) => (
+      <div className="sm:max-w-[65%] text-[--text-secondary]">
+        <ul className="my-2">
+          {details["description"].map((item, index) => (
             <li
               key={index}
-              className='text-[--text-secondary] pl-4 text-[1.1rem]'
+              className="text-[--text-secondary] pl-4 text-[1.1rem]"
             >
-              <span className='text-[--text-secondary] pr-2'>&#8226;</span>
+              <span className="text-[--text-secondary] pr-2">&#8226;</span>
               {item}
             </li>
           ))}
@@ -50,7 +50,7 @@ export default function Experience({ details }) {
         {details[summary].length > 0 ? (
           <Details details={details} summary={summary} />
         ) : (
-          ''
+          ""
         )}
       </div>
     </div>
