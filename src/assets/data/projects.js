@@ -4,7 +4,7 @@ export const projects = [
     name: "Natours",
     image: "../assets/project-image/portfolio.jpg",
     github: "https://github.com/llhyuan/natours",
-    livesite: "https://natours-lhyuan.netlify.app/",
+    livesite: "https://natours-llhyuans-projects.vercel.app",
     content:
       "This is a full-stack web app from a Udemy course project. I rebuilt and improved the whole stack with:",
     points: [
